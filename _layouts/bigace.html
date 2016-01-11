@@ -1,0 +1,14 @@
+{% include header.html %}
+    <div id="contentWrapper">
+        <div id="nav">
+            <div class="left_content">
+                {% include navigation.html %}
+            </div>
+        </div>
+        <div id="content">
+            {% include breadcrumb.html %}
+            {{ content }}
+        </div>
+        <div style="clear:both">&nbsp;</div>
+    </div> <!-- content wrapper -->
+{% include footer.html %}
