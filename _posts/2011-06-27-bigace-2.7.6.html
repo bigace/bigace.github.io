@@ -1,0 +1,68 @@
+---
+layout: bigace-posting
+title: "BIGACE 2.7.6"
+description: "The next bugfix version is there, bringing security updates, many bugfixes and some smaller enhancements."
+category: news
+permalink: /news/bigace-2.7.6.html
+date: "2011-06-27 21:30:00 +0200"
+author: kevinpapst
+---
+<p>
+	Here is a new version for you, including a security bugfix. I strongly recommend to upgrade your system.</p>
+<h2>
+	Download file</h2>
+<p>
+	Get the file from here: <a href="/plugins/get/216-Bigace">Bigace 2.7.6 Download (3.3 MB)</a></p>
+<p>
+	The update is supported from 2.7.2 - 2.7.5: <a href="/plugins/get/218-Bigace+Upgrade">Bigace 2.7.6 Upgrade (3.2 MB)</a></p>
+<h2>
+	Migration Steps</h2>
+<p>
+	This time you need to apply some manual changes to your system. Please read carefully and <a href="http://forum.bigace.de">ask us</a> if you need help!</p>
+<h3>
+	Database</h3>
+<p>
+	You need to apply some manual changes to your database. Please execute the following SQL statements (for example with phpMyAdmin):</p>
+<p>
+	See <a href="http://dev.bigace.org/jira/browse/BIGACE-60">http://dev.bigace.org/jira/browse/BIGACE-60</a>:</p>
+<pre>
+ALTER TABLE `cms_design_portlets` DROP INDEX `cms_mapping`;
+ALTER TABLE `cms_design_portlets` DROP PRIMARY KEY, ADD PRIMARY KEY(`cid`, `design`, `name`);
+ALTER TABLE `cms_design_portlets` ADD INDEX (`cid` , `design`) ;
+</pre>
+<p>
+	Please note, that you might need to use another database prefix. I use &quot;cms_&quot; here, because its the Bigace default prefix. Either check your config file or ask your administrator if you are unsure.</p>
+<h3>
+	Configuration</h3>
+<p>
+	If you see error log entry &quot;Configuration could not be found. Package 'admin', Name 'check.csrf'&quot;, please <a href="http://forum.bigace.de/test-results/configuration-admin-check-csrf-could-not-be-found/">follow this forum posting</a>.</p>
+<p>
+	You need to create a new configuration entry, which was able to slip through the last versions upgrade process.</p>
+<h2>
+	Changelog</h2>
+<p>
+	What happened in between:</p>
+<ul>
+	<li>
+		See <a href="http://dev.bigace.org/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project+%3D+BIGACE+AND+fixVersion+%3D+%222.7.6%22+AND+status+%3D+Closed+ORDER+BY+priority+DESC&amp;mode=hide">Jira fixed issues for 2.7.6</a></li>
+	<li>
+		Improved {random_image} and added Parameter $amount</li>
+	<li>
+		Fixed LinkHelper::itemUrl() call when parameter array was used</li>
+	<li>
+		Added public/system/css/links.css to demonstrate how to auto-link download links</li>
+	<li>
+		Image command now sents filename in header for client-side save dialogs</li>
+	<li>
+		Fixed setlocale problem, which did not work on all server (<a href="http://forum.bigace.de/general/setlocale-(initsession)/">see forum</a>)</li>
+	<li>
+		Improved GenericListing for easier usage (used by new SimpleAds and FAQ)</li>
+	<li>
+		Moved russian translation to plugins, instead of keeping them in the russian language pack</li>
+	<li>
+		Updated several plugins</li>
+</ul>
+<p>
+	Thanks to all of you for downloading Bigace 2.7.5 more than 3000 times!&nbsp;</p>
+<p>
+	Oh, and this version is dedicated to&nbsp;<a href="/admin/news/edit/de?hashtoken=a67c69acd4801e2bfca7c557ab466768&amp;newsID=192&amp;newsLangID=en" target="_blank">Antonio Vivaldi</a>,&nbsp;who is one of my favourite classic artist.</p>

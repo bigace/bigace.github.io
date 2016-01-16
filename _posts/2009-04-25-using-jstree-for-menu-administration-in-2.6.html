@@ -1,0 +1,31 @@
+---
+layout: bigace-posting
+title: "Using jsTree for menu administration in 2.6"
+description: "A short note on changes for the upcoming release 2.6. I am switching from the WebFX Tree component to the fantastic jsTree component."
+category: news
+permalink: /Using-jsTree-for-menu-administration-in-2.6.html
+date: "2009-04-25 23:01:43 +0200"
+author: kevinpapst
+---
+<p>After searching and testing for more than a year and looking into about 30 different tree components I&nbsp;finally found one, which matches the BIGACE requirements, while on the other hand being lightweight and compatible with jQuery (the javascript framework used by BIGACE).</p>
+<p><a href="http://www.jstree.com" target="_blank" title="jQuery Tree component">jsTree</a> is its name and it is developed by <a href="http://vakata.com/en/">Ivan Bozhanov</a>. He did a great job and the community a big favour, sharing this component under the GPL. For me its probably the best Javascript based Tree component next to the YUI Tree and some Mootools implementations.</p>
+<p>The jsTree offers many new features, from which we currently use three:</p>
+<ul>
+    <li>Drag &amp; Drop of nodes, here its used for moving pages around in the tree</li>
+    <li>Context menu, so users can right click and choose the desired option from the context menu (toolbar is still there)</li>
+    <li>Easy tree reloading, we use it for language switching</li>
+</ul>
+<p>If you want to test this component, go and check out or new <a href="http://www.bigace.de/nightly-builds.html">Nightly Builds Demo page</a>.</p>
+<p>Here are some screenshots of how this tree will easify your <a href="http://www.bigace.de">Web CMS</a>&nbsp;life:</p>
+<p><img src="http://www.bigace.de/context-menu.png" alt="" /></p>
+<p><em>The new context menu comes up on right click. It respects permissions, so if you are not allowed to use the editor, this item will not be clickable.</em></p>
+<p><img src="http://www.bigace.de/move-page-1.png" alt="" /></p>
+<p><em>Select a node (page) and you can drag it around. For moving it, just drop it on its new parent node. If you see a red cross, you cannot drop the page, for example if you try to drop it inside a tree below itself.</em></p>
+<p><img src="http://www.bigace.de/move-page-2.png" alt="" /></p>
+<p><em>After the page is dropped, BIGACE will move it and the tree will be automatically refreshed.</em></p>
+<p><img src="http://www.bigace.de/language-switch-1.png" alt="" /></p>
+<p><em>The english pages before we switch the displayed tree language using the drop-down.</em></p>
+<p><img src="http://www.bigace.de/language-switch-2.png" alt="" /></p>
+<p><em>The german tree after the language was switched.</em></p>
+<p>Now there is only one dialog left which needs to be replaced and we can get completely rid of the outdated and Apache licensed <a href="http://webfx.eae.net/dhtml/xtree/index.html" target="_blank">WebFX Tree</a> component, which was used until 2.5. So bye, bye WebFX, welcome <a href="http://www.jstree.com">jsTree - jQuery Tree</a>.</p>
+<p>@Ivan: Thanks for this great piece of software!</p>

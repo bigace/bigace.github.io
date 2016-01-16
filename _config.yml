@@ -1,12 +1,15 @@
-name: Kimai Time-Tracking
+name: BIGACE Web CMS
 markdown: redcarpet
 relative_permalinks: false
-docu_url: http://www.kimai.org/documentation/
-forum_url: http://forum.kimai.org/
-download_url: /download/
-issues_url: https://github.com/kimai/kimai/issues
-stable_url: https://github.com/kimai/kimai/releases/download/0.9.3/kimai_0.9.3.zip
-permalink: /blog/:year/:title/
+docu_url: http://wiki.bigace.de
+forum_url: http://forum.bigace.de
+download_url: /download.html
+tools_url: http://dev.bigace.de/tools
+api_url: http://dev.bigace.de/api/latest/
+image_url: http://www.bigace.de/hoster
+issue_url: https://github.com/bigace/bigace2/issues
+github_url: https://github.com/bigace/
+permalink: /news/:title
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap

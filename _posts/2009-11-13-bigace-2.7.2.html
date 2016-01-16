@@ -1,0 +1,43 @@
+---
+layout: bigace-posting
+title: "BIGACE 2.7.2"
+description: "The next bugfix is there, including security fixes. Please upgrade your systems!"
+category: news
+permalink: /BIGACE-2.7.2.html
+date: "2009-11-13 13:57:15 +0200"
+author: kevinpapst
+---
+<p>Hi everyone, this is a bugfix release, that adresses a blocker bug that occured in some translations. It also fixes the problem introduced with the CSRF check that was implemented with 2.7 and some important security fixes, so you are really asked to upgrade as soon as possible!</p>
+<h3>Download &amp; Upgrade</h3>
+<ul>
+    <li><a href="http://sourceforge.net/projects/bigace/files/1_BIGACE%20CMS/bigace_2.7.2.zip/download">Installation package 2.7.2</a> (not for upgrades!)</li>
+    <li><a href="http://sourceforge.net/projects/bigace/files/1_BIGACE%20CMS/bigace_update_2.7-2.7.2.zip/download">Upgrade package 2.7.2</a></li>
+</ul>
+<p>To upgrade, just download the <a href="http://sourceforge.net/projects/bigace/files/1_BIGACE%20CMS/bigace_update_2.7-2.7.2.zip/download">upgrade ZIP</a>, extract it and upload the two files. Open install.php in your browser and let the script extract Bigace. Afterwards delete the previously uploaded files. Your system should now run 2.7.2.</p>
+<p>If the scipt can't extract the files, extract them manually on your computer and upload them via FTP.</p>
+<h3>Changelog</h3>
+<ul>
+    <li><strong>Fixed broken Javascript admin tree for languages using apostrophe (like Dutch)</strong></li>
+    <li>Fixed encoding problem in language chooser (menu admion and menu creation)</li>
+    <li>Fixed &quot;generic form&quot; which is used by extensions like <a href="http://wiki.bigace.de/bigace:extensions:modul:faq">FAQ</a></li>
+    <li>Let MySQL&nbsp;decide about full text indexes word-length (changing min word length does not require to resave content any longer)</li>
+    <li>Use min word length setting for front end in default design Blix</li>
+    <li>A new CSRF check was implemented that is way better than the last approach (see below)</li>
+    <li>Fixed multiple XSS problems (see below)</li>
+</ul>
+<h3>CSRF check</h3>
+<p>The <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF</a> check in the Administration was originally implemented in a bad way, that caused caused troubles in some server environments (<a href="http://forum.bigace.de/installation/admin-error-403-forbidden">forum thread</a>).</p>
+<p>I implemented a new check, that is likely to work for every one. For the interested people: A security token (a quite long and random string) is created and stored in your session, which has a TTL&nbsp;(time-to-live) of 30 minutes after your last request. This token is added to forms and checked before data will be saved. So, an attacker had to guess a more than 32 long and random character string and that within the last 30 minutes after you left the administration.... Now, decide for yourself how secure this is. If a developer has an even better solution, please contact me in the forum or here in the comments!</p>
+<p>Just one more thing:&nbsp;Its always a good idea to logout, after you finished the work on ANY website. Almost every application (including Gmail and Facebook)&nbsp;had problems like this. Protect yourself, the web is potentially unsafe...</p>
+<h3>XSS vulnerabilities</h3>
+<p><a href="http://en.wikipedia.org/wiki/Cross-site_scripting">XSS vulnerabilities</a> occur by not sanitizing the input values properly. It was possible to save HTML&nbsp;in fields that were not meant to hold HTM. You could (for example)&nbsp;create a configuration with the name:</p>
+<p>&lt;script&gt;alert('XSS')&lt;/script&gt;</p>
+<p>After you saved an alert came up. This problem was fixed in multiple places.</p>
+<h3 id="credits">Credits</h3>
+<p>The vulnerabilities were found and reported by <a href="http://www.bkav.com.vn/"><strong>Bkis</strong></a> (BACH KHOA INTERNETWORK SECURITY CENTER, HANOI UNIVERSITY OF TECHNOLOGY), a Vietnamese leading Center in researching, deploying network security software and solutions. Check out their <a href="http://blog.bkis.com/en/">security blog</a> as well.</p>
+<p>I was contacted three weeks ago by Bui Quang Minh and they gave me the time to create patches and test them, before releasing these informations.</p>
+<h3>Conclusion</h3>
+<p>Please <a href="http://wiki.bigace.de/bigace:upgrade">upgrade your system</a> soon and do not forget to create a backup first.</p>
+<p>We have to test these things better in the future. Please help Bigace by testing it in the <a href="http://nightly.bigace.de/" target="_blank">nightly build demo</a> (login with admin/admin). If you find more problems like this, report them here, in the forum or va Email through my <a href="http://www.kevinpapst.de/kontakt/">homepage</a>. Every help is appreciated!</p>
+<p>My last words are dedicated to the professional security teams out-there: Thanks for your great work and your co-operation. I&nbsp;am very pleased, that once again a security team tested Bigace and was responsible enough to contact me up-front, before releasing exploits to a wider audience.&nbsp;</p>
+<p>... and hey, did you know that Bigace is even  known in Hanoi?! Great, isn't it :D</p>

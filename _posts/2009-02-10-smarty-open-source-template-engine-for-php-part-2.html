@@ -1,0 +1,38 @@
+---
+layout: bigace-posting
+title: "Smarty - Open Source Template Engine for PHP (Part 2)"
+description: "The second part of our Smarty introduction, meant for CMS users who are not familiar with this great PHP template engine."
+category: news
+permalink: /Smarty-Open-Source-Template-Engine-for-PHP-Part-2.html
+date: "2009-02-10 04:51:56 +0200"
+author: kevinpapst
+---
+<p>And here is the first part of our &quot;<a title="Smarty for BIGACE Web CMS" href="/Smarty-Open-Source-Template-Engine-for-PHP-Part-1.html">Smarty Template engine for CMS</a>&quot; introduction.</p>
+<h2>Speed</h2>
+<p>Smarty processes data and templates in two steps, what increases the speed massive:</p>
+<ul>
+    <li>At first a new PHP file is generated from the PHP-Code and the HTML template, which covers         a mix-up of HTML and PHP, which otherwise would have been written by the developer without using Smarty templates.         This temporary PHP file will only be recreated, when one of the smarty templates changes, so         the template is not parsed for every single page call.</li>
+    <li>If required Smarty can save the finally HTML output. That said, your webserver serves practically a static website         for every request, what brings a performance boost especially for PHP applications using multiple database queries.         For webapplications normally there are less database updates than database queries, therefor the developer case          has to consider, that in this case (after a database update) the cache needs to be flushed/deleted.<br />
+    <em>         For BIGACE we did not yet implement this caching strategy yet, but this task is one of the next that we will look at          for the next release (2.6).      </em></li>
+</ul>
+<h2>Advantages</h2>
+<p>The advantages of smarty are primarily based on the fact, that dynamic and static parts can be mixed up free,  where the PHP code only needs to pass the required data to the Smarty template engine.</p>
+<p>A complete isolation between the code which prepares the data and the one that creates the layout with smarty is achieved. The presentation can be completely changed this way without the need to change the application code.</p>
+<p>Smarty can be extended by own plugins easily, which add special functionality to your system.</p>
+<p>A lot of default tasks, like the creation of select-boxes and filtering of strings can be achieved more easily.</p>
+<h2>Criticism</h2>
+<p>Among other things one of the biggest criticisms is, that PHP already is a template-engine and with the use of smarty the  learn curve increases, the complexity rises and the performance suffers.</p>
+<p>Smarty does not separate between logic and display as it is often dicussed, but it gives us an efficient way of mixing up static and dynamic content.</p>
+<p>Another critic point is the little support of the PHP5 OO-features like method chaining.  <em><br />
+This point if one of the biggest issues I have as well with Smarty: Working with complex data, this can be a pain in the developers ... fingers ;-D </em></p>
+<h2>Conclusion</h2>
+<p>This conclusion is our point of view. Smarty is a great chance to tie designers and developers together. Especially in Content Management Systems its a chance for unexperienced users to change their <a href="http://wiki.bigace.de/bigace:developer:template">website templates</a>, without messing around with the PHP&nbsp;side. Smarty TAGs are much easier to understand and customize than any PHP&nbsp;statement could ever be. </p>
+<p>For BIGACE users there is still the choice between PHP&nbsp;and Smarty templates, but I recommend using Smarty. They are better portable and you do not have to mess with the <a href="http://wiki.bigace.de/bigace:php_api">PHP&nbsp;API</a>. For further information, our <a href="http://wiki.bigace.de/bigace:smarty_tags" title="Smarty TAGs for BIGACE Web CMS">Smarty TAGs</a> are documented in the <a href="http://wiki.bigace.de/" title="BIGACE Web CMS documentation">bigace documentation wiki</a>.</p>
+<h2>Links</h2>
+<ul>
+    <li>First part of our &quot;<a title="Smarty for BIGACE Web CMS" href="/Smarty-Open-Source-Template-Engine-for-PHP-Part-1.html">Smarty Template engine for CMS</a>&quot; introduction</li>
+    <li><a href="http://www.smarty.net">Smarty Homepage - PHP Template Engine</a></li>
+    <li><a href="http://en.wikipedia.org/wiki/Smarty">Wikipedia Smarty [en]</a></li>
+    <li><a href="http://de.wikipedia.org/wiki/Smarty">Wikipedia Smarty [de]</a></li>
+    <li><a href="http://www.phpbar.de/w/Smarty">Original article at phpbar.de</a></li>
+</ul>

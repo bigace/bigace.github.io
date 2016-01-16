@@ -1,0 +1,55 @@
+---
+layout: bigace-posting
+title: "Smarty - Open Source Template Engine for PHP (Part 1)"
+description: "Smarty is one of the most recognized template engines for PHP. The BIGACE Web CMS uses Smarty as default template engine. Its meant to make life for template designers easier and increase the learning curve for new users."
+category: news
+permalink: /Smarty-Open-Source-Template-Engine-for-PHP-Part-1.html
+date: "2008-12-19 21:55:45 +0200"
+author: kevinpapst
+---
+<p>One of the great aspects of Smarty is its high speed for a template engine. Smarty achieves its high speed by reading the template files once  and generating new PHP scripts from those. The new generated PHP files can then directly be parsed by the PHP engine, where the resulting  speed is almost as high as writing native PHP. <br />
+Using that pre-parsing technique, the time-consuming task of parsing templates for every request doe not happen.</p>
+<p>Using the generated (temporarily) PHP scripts one can benefit from Smartys compiler-caching solutions. If required Smarty can even cache the resulting HTMl output. That results in the webserver practically sending a static HTML page, without  the overhead of executing PHP calls and database queries.</p>
+<h2>Working mechanism</h2>
+<h3>How do templates work?</h3>
+<p>Assume we are going to show data from within PHP. Without splitting PHP and HTML the code could look like that:</p>
+<pre class="code">
+&lt;table&gt;
+  &lt;tr&gt; &lt;td&gt;Name: &lt;?php echo htmlspecialchars($name); ?&gt;&lt;/td&gt; &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<p>Using Smarty we are able to split PHP and HTML, by using placeholder in the HTML code, which will than be filled by Smarty using the PHP backend.</p>
+<p>The above example using Smarty would look like that:</p>
+<p><b>PHP-Code:</b></p>
+<pre class="code">
+// Create Smarty-Object
+$template = new Smarty();
+// fill placeholder with value
+$template-&gt;assign('name', $name);
+// HTML-Output
+$template-&gt;display('template.tpl');
+</pre>
+<p><b>template.tpl</b></p>
+<pre class="code">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Name: {$name}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<p>Already with this small example you can see, that Smarty enhances the clarity of your code. You can concentrate on the real PHP code  in your application, which is now not mixed-up within the HTML any longer. <br />
+Other way round, a webdesigner can work better on his HTML template, because he doesn't want to handle surrounding PHP code  but concentrate on clean and good HTML code.</p>
+<h3>Further functionality</h3>
+<p>In real life we need more options when we are going to split HTML from PHP completely. Thats why Smarty gives us a lot of useful <a title="Smarty documentation" href="http://www.smarty.net/manual/en/">functions</a>  (<a title="Smarty Dokumentation" href="http://www.smarty.net/manual/en/">german</a>) to handle complex data like objects. But where Smarty is really good is in handling and displaying PHP arrays.</p>
+<p>Smarty has also a well documented PlugIn-Interface and several options for a developer to extend it with modifier, filter, resources and block functions.</p>
+<p>Example: Code for a formatted output of the Array $items (the function nl2br replaces line breaks with the html equivalent &lt;br /&gt;):</p>
+<pre class="code">
+&lt;ul&gt;
+  {foreach from=$items item=&quot;test&quot;}
+    &lt;li&gt;{$test|escape:'html'|nl2br}&lt;/li&gt;
+  {/foreach}
+&lt;/ul&gt;
+</pre>
+<h2>Part 1 vs. Part 2</h2>
+<p>This was the first of two parts introducing the Smarty template engine for the BIGACE Web CMS. The next part of our <a href="/Smarty-Open-Source-Template-Engine-for-PHP-Part-2.html" title="Smarty Template Engine for BIGACE CMS">Smarty template engine</a> introduction covers the points <strong>Speed</strong>, <strong>Advantages</strong>, <strong>Criticism</strong>, <strong>Links</strong>.</p>
+<p><em>There is a previous posting about </em><a href="/New-Smarty-Website-Designs-for-you.html"><em>Smarty templates</em></a><em> for your website and you can find even more </em><a title="Templates and Plugins for BIGACE" href="http://wiki.bigace.de/bigace:extensions"><em>Smarty designs</em></a><em> in the extension wiki. </em></p>

@@ -1,0 +1,1179 @@
+---
+layout: bigace
+title: Changelog
+description: Bigace Changelog
+permalink: /changelog.html
+redirect_from: /de/changelog.html
+redirect_from: /changelog_1_7.html
+redirect_from: /de/changelog_1_7.html
+redirect_from: /changelog_1_8.html
+redirect_from: /de/changelog_1_8.html
+redirect_from: /changelog_1_9.html
+redirect_from: /de/changelog_1_9.html
+redirect_from: /changelog_2_0.html
+redirect_from: /de/changelog_2_0.html
+redirect_from: /changelog_2_1.html
+redirect_from: /de/changelog_2_1.html
+redirect_from: /de/changelog_2_2.html
+redirect_from: /changelog_2_2.html
+redirect_from: /changelog_2_3.html
+redirect_from: /de/changelog_2_3.html
+redirect_from: /changelog-2-4.html
+redirect_from: /de/changelog-2-4.html
+redirect_from: /changelog-2-5.html
+redirect_from: /de/changelog-2-5.html
+redirect_from: /changelog-2-6.html
+redirect_from: /de/changelog-2-6.html
+redirect_from: /changelog-2-7.html
+redirect_from: /de/changelog-2-7.html
+---
+<h2>[2.7]</h2>
+<p><strong>Bugs</strong></p>
+<ul>
+    <li>[Admin] fixed admin backlink in systems with deactivated URL rewriting [<a href="http://forum.bigace.de/test-results/bigace-2-6-final-categories/">Forum</a>]</li>
+    <li>[Admin] fixed old styled URL in editors default link dialog for pages with children</li>
+    <li>[Admin] fixed several buttons which did not work with deactivated URL rewriting and IE</li>
+    <li>[Admin] fixed "delete selected" problem for IE [<a href="http://forum.bigace.de/test-results/ie-bug-bigace-2-6-dashboadsystemlogging/">Forum</a>]</li>
+    <li>[Admin] do not show hidden pages in "last edited page" [<a href="http://forum.bigace.de/test-results/portlet-%27last-edited-page%27/">Forum</a>]</li>
+    <li>[Core] last_created_items to respect exclude flags</li>
+    <li>[Core] URL vulnerability [<a href="http://www.milw0rm.com/exploits/9052" rel="nofollow">Milworm</a>,&nbsp;<a href="http://secunia.com/advisories/36523/" rel="nofollow">Secunia</a>]</li>
+    <li>[Core] CSRF vulnerability [<a href="http://secunia.com/advisories/36524/" rel="nofollow">Secunia</a>]</li>
+    <li>[Core] wrong parameter found in MenuAdminMask (notice)</li>
+    <li>[Core] infinite loop in portlets when toplevel language is missing [SF <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2706297&amp;group_id=149865&amp;atid=776045"><span>2706297</span></a>]</li>
+    <li>[Core] missing template for anonymous user with missing read permission</li>
+    <li>[Core] Community installation fails under IIS [SF <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2619810&amp;group_id=149865&amp;atid=776045"><span>2619810</span></a>]</li>
+    <li>[Plugin] News - Default image couldn't be deleted [SF <a href="http://sourceforge.net/tracker/?func=detail&amp;aid=2217313&amp;group_id=149865&amp;atid=776045"><span>2217313</span></a>]</li>
+    <li>[Search] Hidden pages cannot be found [SF <a href="http://sourceforge.net/tracker/?func=detail&amp;aid=2148483&amp;group_id=149865&amp;atid=776045" target="_blank">2148483</a>]</li>
+</ul>
+<p><span style="font-weight: bold;">Feature Requests</span></p>
+<ul>
+    <li>[Auth] Preselect current language for login</li>
+    <li>[Admin] Allow to delete Usergroups</li>
+    <li>[Core] Added "Lost password" feature [SF&nbsp;<a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1884625&amp;group_id=149865&amp;atid=776048" target="_blank"><span>1884625</span></a>]</li>
+    <li>[Smarty] new TAG {navitree} (no docu yet) [SF <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=2037622&amp;group_id=149865&amp;atid=776048" target="_blank"><span>2037622</span></a>]</li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li>[Core] Added HTTP 304 header and Etag for better client side image caching</li>
+    <li>[Core] support php's zip extension for installing extensions</li>
+    <li>[Core] added customizable maintenance smarty template</li>
+    <li>[Core] added hidden parameter to {last_created_items}</li>
+    <li>[Core] using latest jQuery and jQuery UI versions</li>
+    <li>[Editor] using FCKeditor 2.6.5</li>
+    <li>[Editor] Improved ImageBrowser UI + Upload (no name required)</li>
+    <li>[Editor] Translated Upload in Link-/FileBrowser</li>
+    <li>[Admin] new jQuery UI theme, improved tab management</li>
+    <li>[Admin] merged Credits, License and Feedback into a single menu</li>
+    <li>[Smarty] <a href="http://wiki.bigace.de/bigace:smarty_tags:link_item_languages">link_item_languages</a> has new default parameter</li>
+    <li>[Installer] Added portuguese to pre-installer [<a href="http://forum.bigace.de/translations/tranlating-the-pre-installer/msg4043/#msg4043">Forum</a>]</li>
+</ul>
+
+<h2>[2.6]</h2>
+<p><strong>Bugs</strong></p>
+<ul>
+    <li>[Core] <!-- google_ad_section_start -->Toolportlet "Home" points to wrong language [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=2697476">2697476</a>]</li>
+    <li>[Core] added API and wrapper method for simple object permission check, e.g.:&nbsp;<br>
+        <em>has_item_permission(1, -1, 'w')</em></li>
+    <li>[Core] fixed AJAX vaildation and security issue</li>
+    <li>[Core] fixed error log entry in Hooks, added static keyword</li>
+    <li>[Core] install file restructuring and new build task for APS compatibility</li>
+    <li>[Admin] fixed configuration field for string values (single and double quotes broke input field)</li>
+    <li>[Admin] fixed error message on unset feeds (available through config option)</li>
+    <li>[Admin] fixed some missing translations</li>
+    <li>[Admin] CSS News Box paßt nicht zur Administration [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=2172663" target="_blank"><span>2172663</span></a>]</li>
+    <li><strong>[Core] Fixed SQL Injection [</strong><a href="/Security-Fix-for-2.5.html"><strong>News</strong></a><strong>, SF Bug </strong><a href="http://sourceforge.net/tracker/?func=detail&amp;aid=2779822&amp;group_id=149865&amp;atid=776045"><strong><span>2779822</span></strong></a><strong>]</strong></li>
+    <li>[Editor] Removed all keybindings from markItUp editor sets [<a href="http://forum.bigace.de/test-results/problem-with-swedish-keyboard-layout/">Forum</a>]</li>
+    <li>[Core] fixed problem with refreshing history versions [<a href="http://forum.bigace.de/test-results/history-pages-cannot-be-refreshed/">Forum</a>]</li>
+</ul>
+<p><span style="font-weight: bold;">Feature Requests</span></p>
+<ul>
+    <li>[Auth] Welcome email after self-registration is translateable via .properties files</li>
+    <li>[Admin] Menu admin shows pages in wrong language [SF Feature <a href="http://sourceforge.net/support/tracker.php?aid=2009098" target="_blank"><span>2009098</span></a>]</li>
+    <li>[Comments] Send comment in info email [SF Feature <a href="http://sourceforge.net/support/tracker.php?aid=2444704" target="_blank">2444704</a>]</li>
+    <li>[Login] Select language in Auth-Login [<a href="http://forum.bigace.de/feature-requests/select-language-in-auth-login/">Forum</a>]</li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li>[Install] Pre-Installer now available in 4 languages (German, English, Finnish, Swedish)</li>
+    <li>[Template] increased default template width to 800px</li>
+    <li>[Core] replaced usage of global variables for directories by constants for security reasons</li>
+    <li>[Core] additional actions and filters, for example page_header and metatags_more</li>
+    <li><strong>[Core] Admin plugins need to be stored directly within /system/admin/plugins/ - @developer: check your plugins for compatibility!</strong></li>
+    <li>[Admin] worked on overall styles, improved buttons and table design</li>
+</ul>
+
+<h2>[2.5]</h2>
+<p><strong>Bugs</strong></p>
+<ul>
+    <li>Fixed stripslashes problem when saving module content</li>
+    <li>&nbsp;<!-- google_ad_section_start -->Disabled tabs in user administration [SF&nbsp;Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2687007&amp;group_id=149865&amp;atid=776045" target="_blank">2687007</a>]</li>
+</ul>
+<p><span style="font-weight: bold;">Feature Requests</span></p>
+<ul>
+    <li>Printer friendly version of pages [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1984503&amp;group_id=149865&amp;atid=776048">1984503</a>]</li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li>New Language: <a title="Finnish for BIGACE" href="http://wiki.bigace.de/bigace:extensions:language:fi"><strong>Finnish</strong></a> - thanks <a href="http://www.jenkky.tk" target="_blank">Jenkky</a>!</li>
+    <li>Made email adress for admin feedback panel configurable</li>
+    <li>Show error instead success when modul could not be saved</li>
+</ul>
+<h2>[2.5 RC 4]</h2>
+<p><strong>Bugs</strong></p>
+<ul>
+    <li>neue Seite -&gt; per default versteckt [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=2033910">2033910</a>]</li>
+    <li>fixd exploitable REDIRECT_URL in auth framework</li>
+</ul>
+<p><span style="font-weight: bold;">Feature Requests</span></p>
+<ul>
+    <li>Increase field size of input type=file [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2624284&amp;group_id=149865&amp;atid=776048" target="_blank">2624284</a>]</li>
+    <li>SEO: Meta &lt;title&gt; configurable for each page [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2603836&amp;group_id=149865&amp;atid=776048" target="_blank">2603836</a>]</li>
+    <li>SEO: Meta &lt;robots&gt;  configurable for each page [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2603834&amp;group_id=149865&amp;atid=776048" target="_blank">2603834</a>, <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2589046&amp;group_id=149865&amp;atid=776048" target="_blank">2589046</a>, <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2596412&amp;group_id=149865&amp;atid=776048" target="_blank">2596412</a>]</li>
+    <li>SEO: Sitemap for hidden subtrees [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2603845&amp;group_id=149865&amp;atid=776048" target="_blank">2603845</a>, <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2005441&amp;group_id=149865&amp;atid=776048" target="_blank">2005441</a>]</li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li>Added Plugin Framework with new directory /plugins/ and action/filter system</li>
+    <li>Added some Core events to hook on</li>
+    <li>Improved usability of admin boxes, especially menu attributes and creation dialogs</li>
+    <li>Added "Latest incoming links" feed to admin dashboard, Ajax loading of uncached feeds</li>
+    <li>Improvements for Admin Header Template</li>
+</ul>
+
+<h2>[2.5 RC 3]</h2>
+<p><strong>Bugfixes</strong></p>
+<ul>
+    <li>[Core] Missing include in Imagebrowser popup</li>
+    <li>[Core] Missing configuration for search/minimum.word.length</li>
+    <li>[Core] Improved Community-URL&nbsp;mapping (re-added sub domain support and deep path mapping)</li>
+    <li>[Core] Added backward compatibility for module translations</li>
+    <li>[Core] changed logging - errors are always logged, log level config only describes details for lower levels</li>
+    <li>[Core] Error message when community not found (2.5RC1) [SF&nbsp;Bug <a target="_blank" href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=2094747&amp;group_id=149865&amp;atid=776045">2094747</a>]</li>
+    <li>[Core] smarty tag {navigation} used global object MenuService, which failed in some situations</li>
+    <li>[Core] Event dispatcher does not work [SF&nbsp;Bug <a target="_blank" href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=2157277&amp;group_id=149865&amp;atid=776045">2157277</a>]</li>
+    <li>[Admin] Fixed JS problem in Community Deinstall</li>
+    <li>[Admin] fixed translation problem in "Create menu" screen</li>
+    <li>[Admin] Falsche Übersetzung beim löschen Historischer Versionen [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2172586&amp;group_id=149865&amp;atid=776045">2172586</a>]</li>
+    <li>[Admin] fixed jquery.pack.js not found</li>
+    <li>[Admin] fixed missing mimetypes icons for UPPERCASE filenames</li>
+    <li>[Admin] Datei -&gt; Sprachversion anlegen -&gt; ohne Dateiendung [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2033924&amp;group_id=149865&amp;atid=776045">2033924</a>]</li>
+    <li>[Admin] Logout instead of Login with missing permission [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1985697&amp;group_id=149865&amp;atid=776045">1985697</a>]</li>
+    <li>[Editor] Editor -&gt; Server durchsuchen -&gt; ERR im Logfile [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2033876&amp;group_id=149865&amp;atid=776045">2033876</a>]</li>
+    <li><strong>[Installer] stop installation &amp; show error if critical component (like mysql extension) is missing</strong> (thanks Markus!)</li>
+    <li>[Installer] fixed problem with .htaccess files [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2037605&amp;group_id=149865&amp;atid=776045">2037605</a>]</li>
+    <li>[Modul] 2.5 RC3 - Securimage doe not work [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2174630&amp;group_id=149865&amp;atid=776045">2174630</a>]</li>
+</ul>
+<p><strong>Feature Requests</strong></p>
+<ul>
+    <li>[Core] Send event when item is deleted [SF Feature <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=2157291&amp;group_id=149865&amp;atid=776048" target="_blank">2157291</a>]</li>
+    <li>[Core] Delete multiple files at once [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2187499&amp;group_id=149865&amp;atid=776048">2187499</a>]</li>
+    <li>[Admin] Add Mass Update to Menu administration [SF Feature <a href="https://sourceforge.net/support/tracker.php?aid=1340425" target="_blank">1340425</a>]</li>
+    <li>[Admin] Comment moderation [SF Feature <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=2055974">2055974</a>]<!-- google_ad_section_end --></li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li><strong>[Core] support for uploading images in menu tree</strong> [see SF&nbsp;<a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=2172608&amp;group_id=149865&amp;atid=776045" target="_blank">2172608</a>]</li>
+    <li>[Core] added first audit messages: authentication, search, login, logout</li>
+    <li>[Core] cleaned exception messages</li>
+    <li>[Admin] Import files from URLs (is supported by server)</li>
+    <li>[Admin] update permissions for multiple images/files</li>
+    <li>[Admin] improved permission dialog usability</li>
+    <li>[Admin] added order, orderby, sorting for images and files</li>
+    <li>[Admin] small facelift for form elements (including new icons)</li>
+    <li>[Admin] Improved handling when managing thousands of images/files</li>
+    <li>[Admin] Logging: Choose namespace, keep values during page switch using javascript</li>
+    <li>[Installer] Translated Pre-Installer to German and Swedish</li>
+    <li>[Installer] Added swedish translation</li>
+    <li>[Installer] changed layout for more usability</li>
+    <li>[Installer] new success screen after installation</li>
+</ul>
+
+<h2>[2.5 RC 2]</h2>
+<p><strong>Bugfixes</strong></p>
+<ul>
+    <li>[Search] Proper UTF-8 encoding for displaying results</li>
+    <li>[Core] Removed leading whitespace in Smarty Templates</li>
+    <li>[Core] No statistic data was logged/Statistik -&gt; Log Devion by null [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2033920&amp;group_id=149865&amp;atid=776045" target="_blank">2033920</a>]</li>
+    <li>[Core] Cache entries are not deleted when item is removed [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2120907&amp;group_id=149865&amp;atid=776045" target="_blank">2120907</a>]</li>
+    <li>[Core] Never use ID again after deletion [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1753967&amp;group_id=149865&amp;atid=776045">1753967</a>]</li>
+    <li>[Core] neue Sprachversion anlegen -&gt; Eindeutige URL nicht korrekt [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2033912&amp;group_id=149865&amp;atid=776045" target="_blank">2033912</a>]</li>
+    <li>[Core] Eindeutige URL ändern -1 am Ende [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2037568&amp;group_id=149865&amp;atid=776045">2037568</a>]</li>
+    <li>[Core] IIS Problem [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2045611&amp;group_id=149865&amp;atid=776045">2045611</a>]</li>
+    <li>[Install] missing directory permission checks in installer [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2037599&amp;group_id=149865&amp;atid=776045" target="_blank">2037599</a>]</li>
+    <li>[Admin] Missing icon in "move page" popup [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2037578&amp;group_id=149865&amp;atid=776045">2037578</a>]</li>
+    <li>[Admin] Download images as ZIP [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2037423&amp;group_id=149865&amp;atid=776045" target="_blank">2037423</a>]</li>
+    <li>[Admin] Several entity problems because of to UTF-8 switch [SF Bug<span style="font-weight: bold;"> </span><a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2033914&amp;group_id=149865&amp;atid=776045" target="_blank">2033914</a>,<span style="font-weight: bold;"> </span><a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2037413&amp;group_id=149865&amp;atid=776045" target="_blank">2037413</a>,<span style="font-weight: bold;"> </span><a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=2037408&amp;group_id=149865&amp;atid=776045" target="_blank">2037408</a>]</li>
+    <li>[Admin] Lange Fehlertexte zerschiessen das Design [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2033881&amp;group_id=149865&amp;atid=776045">2033881</a>]</li>
+    <li>[Admin] Page could not be assigned to a workflow</li>
+    <li>[Admin] Wrong smarty URLs with deactivated Smarty [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1999645&amp;group_id=149865&amp;atid=776045">1999645</a>]</li>
+    <li>[Admin] Save items with empty name [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1878421&amp;group_id=149865&amp;atid=776045" target="_blank">1878421</a>]</li>
+    <li>[Editor] fehlende Übersetzung bei Statusmeldungen [SF Bug<span style="font-weight: bold;"> </span><a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2033885&amp;group_id=149865&amp;atid=776045">2033885</a>]</li>
+    <li>[Editor] internen Link setzen Wortwahl[SF Bug <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=2033891&amp;group_id=149865&amp;atid=776045" target="_blank">2033891</a>]</li>
+    <li>[Editor] Verlinken auf Versteckte Seiten [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2037410&amp;group_id=149865&amp;atid=776045">2037410</a>]</li>
+</ul>
+<p><strong>Feature Requests</strong></p>
+<ul>
+    <li>[Core] German "Umlaute" in unique URLs [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1973397&amp;group_id=149865&amp;atid=776048" target="_blank">1973397</a>]</li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li><strong>[Admin] Improved "Create page dialog" (added content editor, unique url field...)</strong></li>
+    <li><strong>[Admin] Admin feature: Create modules + module editor</strong></li>
+    <li><strong>[Admin] Search menus, images and files by id, name, description, catchwords &amp; content</strong></li>
+    <li>[Admin] remote bigace news in admin dashboard</li>
+    <li>[Core] rewritten init process + configs</li>
+    <li>[Core] fixed and enhanced hidden footer</li>
+    <li>[Installer] easified installer (again less clicks required!)</li>
+</ul>
+<p>Special thanks to Swen Wendler for testing and all the valueable feedback!</p>
+
+<h2>[2.5 RC 1]</h2>
+<p><strong>Bugfixes</strong></p>
+<ul>
+    <li>[Editor] fixed link dialog in FCKeditor</li>
+    <li>[Editor] do not ask for save after switching language but without changes</li>
+    <li>[Core] fixed Statistic writing and calculation (date column wasn't logged, but promise: you lost no data!)</li>
+    <li>[Core] fixed problem with linebreaks in Modul admin</li>
+    <li>[Core] last_edited_items where fetched as first_edited_items at least in the LastEditemItems-Portlet</li>
+    <li>[Core] fixed Item to work with null values in int fields</li>
+    <li>[Core] fixed SQL Engine working with int values</li>
+    <li>[Core] fixed QuickSearchPortlet to work with new Search Application</li>
+    <li><b>[Core] fixed several security issues [<a href="/security-problem-urgent-update-required.html">News</a>]</b></li>
+    <li>[Core] Creating a new group permission failed</li>
+    <li><b>[Installer] fixed blocker bug with MySQL setting STRICT_TRANS_TABLES</b></li>
+    <li>[Admin] Missing translation file [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1878422&amp;group_id=149865&amp;atid=776045">1878422</a>]</li>
+    <li>[Admin] Favicon missing in Admin Load Screen [SF Bug <a target="_blank" href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1991298&amp;group_id=149865&amp;atid=776045">1991298</a>]</li>
+    <li>[Admin] fixed wrong path to javascript in admin header template</li>
+    <li>[Admin] fixed stripslashes in Maintenance mode</li>
+    <li>[Admin] Unique URL changes on update [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1980957&amp;group_id=149865&amp;atid=776045" target="_blank">1980957</a>]</li>
+    <li>[Admin] Values are gone when creating Menu under wrong parent [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1718119&amp;group_id=149865&amp;atid=776045">1718119</a>]</li>
+    <li>[Admin] fixed Content-type header problem</li>
+    <li>[Admin] Setting a Usergroup in configuration panel failed</li>
+    <li>[Admin] remove Community might use wrong Community ID</li>
+</ul>
+<p><strong>Feature Requests</strong></p>
+<ul>
+    <li>[Core] Configurable Sitename {sitename} [SF Feature<span style="font-weight: bold;"> </span><a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1921781&amp;group_id=149865&amp;atid=776048" target="_blank">1921781</a>]</li>
+    <li><strong>[Core] Use UTF-8 codepage [SF Feature </strong><a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1511157&amp;group_id=149865&amp;atid=776048" target="_blank"><strong>1511157</strong></a><strong>]</strong></li>
+    <li>[Admin] Upload a file without entering a name [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1935576&amp;group_id=149865&amp;atid=776048">1935576</a>]</li>
+    <li>[Admin] Delete install files from administration[SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1884622&amp;group_id=149865&amp;atid=776048" target="_blank">1884622</a>]</li>
+    <li>[Admin] Add the UniqueURL to the Item Info Popup [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1884620&amp;group_id=149865&amp;atid=776048" target="_blank">1884620</a>]<!-- google_ad_section_end --></li>
+    <li>[Installer] checking installation - yellow light [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1935601&amp;group_id=149865&amp;atid=776048" target="_blank">1935601</a>]</li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li><b>[Admin] </b><a href="/markitup-as-stylesheet-template-editor.html"><b>Added markItUp! Editor for Stylesheet/Template editing</b></a></li>
+    <li>[Admin] do not load menuTree Plugin dynamic (translation error)</li>
+    <li>[Admin] moved Extension Plugin to Extension folder</li>
+    <li>[Admin] use markItUp Editor for Maintenance mode</li>
+    <li>[Admin] integrated JQuery, JQuery UI and several plugins</li>
+    <li>[Admin] removed WebFX TabPane/SortableTable dependencies (Apache License)</li>
+    <li><b>[Core] Multiple contents for every page</b></li>
+    <li><b>[Core] LDAP Authenticator</b></li>
+    <li><b>[Core] added SSL support</b></li>
+    <li>[Core] minimum word length for search index is configurable</li>
+    <li>[Core] add interface for using different captcha methods</li>
+    <li>[Core] Session_ID in der URL [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1912059&amp;group_id=149865&amp;atid=776048" target="_blank">1912059</a>]</li>
+    <li>[Core] Added Event System, for broadcasting messages throughout registered listener</li>
+    <li>[Core] Fixed problems with setlocale()</li>
+    <li>[Core] Use Unique URLs: after language switch, login, logout, {breadcrumb}</li>
+    <li>[Core] configurable delimiter in Unique URLs, instead of hardcoded "_"</li>
+    <li>[Core] configurable unique url extension for menu/image/file</li>
+    <li>[Core] do not forward to top level when entered via /index.php but display top level instead</li>
+    <li>[Core] NavigationPortlet with changed/new configs</li>
+    <li>[Core] Captcha Framework for pluggable Captchas</li>
+    <li>[Modul] Updated: <a target="_blank" href="http://wiki.bigace.de/bigace:extensions:modul:fotogallery">Fotogallery</a>, <a target="_blank" href="http://wiki.bigace.de/bigace:extensions:modul:guestbook">Guestbook</a>, <a target="_blank" href="http://wiki.bigace.de/bigace:extensions:modul:sitemap2">Sitemap 2</a>, <a target="_blank" href="http://wiki.bigace.de/bigace:extensions:modul:iframe">IFrame</a>, <a target="_blank" href="http://wiki.bigace.de/bigace:extensions:modul:submenupreview">Submenu Preview</a>, <a href="http://wiki.bigace.de/bigace:extensions:modul:contactmail" target="_blank">Contact Mail</a>, <a href="http://wiki.bigace.de/bigace:extensions:addon:news">News</a></li>
+    <li>[Smarty] New Templates: <a href="http://wiki.bigace.de/bigace:extensions:smarty:fashionista">Fashionista</a>, <a href="http://wiki.bigace.de/bigace:extensions:smarty:technobabble">Technobabble</a>, <a href="http://wiki.bigace.de/bigace:extensions:smarty:andreas02">Andreas02</a></li>
+    <li>[Extension] New <a href="http://wiki.bigace.de/bigace:extensions:addon:comments">Comments</a> Extension for a "blog like" comment function and "feeling"</li>
+    <li>[Extension] new captcha solution: Securimage</li>
+    <li>[Translation] Editor package added</li>
+    <li>[Translation] new Translation package for Swedish (thanks to Dragonslayer!)</li>
+    <li>[Editor] usability improvements, added <a href="/Using-JGrowl-for-unobtrusive-notifications.html">JGrowl for feedback</a> messages</li>
+</ul>
+
+<h2>[2.4]</h2>
+<p><strong>Bugfixes</strong></p>
+<ul>
+    <li>[Installer] Installation stops after extracting files [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1788095">1788095</a>]</li>
+    <li>[Core] Endless loop in SQL Statement [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1804798" target="_blank">1804798</a>]</li>
+    <li>[Core] Show Modul Name if translation is missing [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1773748" target="_blank">1773748</a>]</li>
+    <li>[Core] Error 403 - bad wording (anonymous) [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1772555" target="_blank">1772555</a>]</li>
+    <li>[Core] Activation fails [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1880340">1880340</a>]</li>
+    <li>[Core] Activation Email subject [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1880326">1880326</a>]</li>
+    <li>[Admin] Standard theme: added missing extensions icon</li>
+    <li>[Admin] Missing translations for user admin</li>
+    <li>[Admin] missing translation - link item category [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1753045" target="_blank">1753045</a>]</li>
+    <li>[Admin] Preview Button does not work [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1878419" target="_blank">1878419</a>]</li>
+    <li>[Editor] FCKeditor -&gt; verstekcte Seiten werden nicht angezeigt [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1806182">1806182</a>]</li>
+    <li><strong>[Editor] Missing feedback if session timed out [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1750883" target="_blank">1750883</a>]</strong></li>
+</ul>
+<p><strong>Feature Requests</strong></p>
+<ul>
+    <li>[Installer] Auto redirect after successful pre-install [SF <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1747854">1747854</a>]</li>
+    <li>[Editor] Loosing changes on language switch [SF Feature <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1753968">1753968</a>]</li>
+    <li>[Editor] Manual Links within the Editor Framework [SF Feature <a href="http://sourceforge.net/support/tracker.php?aid=1770670" target="_blank">1770670</a>]</li>
+    <li>[Editor] Translation Screen for Editor [SF Feature <a href="http://sourceforge.net/support/tracker.php?aid=1744465" target="_blank">1744465</a>]</li>
+    <li><strong>[Admin] Remote lookup for available extensions (via SOAP) [SF Feature <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1452039">1452039</a>]</strong></li>
+    <li>[Admin] Create new user with multiple group assignments</li>
+    <li>[Admin] Seitenadministration -&gt; Rechte in der Navigation [SF Feature <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1606111">1606111</a>]</li>
+    <li>[Search] Suche in die HP einbinden [SF Feature <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1895695">1895695</a>]</li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li>[Installer] Changed all over design and simplified checkup screen</li>
+    <li><strong>[Core] Support real SEO friendly URLs (like </strong><a href="../../../changelog.html">http://www.bigace.de/changelog.html</a><strong>)</strong></li>
+    <li><strong>[Core] Cron Jobs including an Administration Screen for test execution</strong></li>
+    <li>[Core] User attribute Email</li>
+    <li>[Admin] Standard theme: added credits [SF Feature <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1750462">1750462</a>]</li>
+    <li>[Admin] Group Configurations by Package</li>
+    <li>[Admin] New Menu Attributes Layout, including more information and tools</li>
+    <li>[Admin] Choose one editor of all available</li>
+    <li><strong>[Admin] File Mass-Upload [SF Feature <a href="http://sourceforge.net/support/tracker.php?aid=1885198" target="_blank">1885198</a>]</strong></li>
+    <li>[Smarty] new TAG {modul_check} to check if a given modul is installed</li>
+    <li>[Smarty] new TAG {last_created_items} to fetch lasted created items</li>
+    <li>[Smarty] new TAG {last_edited_items} to fetch lastest edited items  [SF Feature <a href="http://sourceforge.net/support/tracker.php?aid=1744919" target="_blank">1744919</a>]</li>
+    <li>[Smarty] new TAG {stylesheet} to fetch a Smarty Stylesheet ot its URL</li>
+    <li>[Smarty] new TAG {user} to fetch a User or its Username</li>
+</ul>
+
+<h2>[2.3]</h2>
+<p><strong>Bugfixes</strong></p>
+<ul>
+    <li>[Admin] CategoryCreate - translation missing [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1749920&amp;group_id=149865&amp;atid=776045">1749920</a>]</li>
+    <li>[Admin] <!--{120446725463042}-->Choosing no Log message to delete causes sql error [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1750459&amp;group_id=149865&amp;atid=776045">1750459</a>]</li>
+    <li>[Admin] <!--{120446725463043}-->System Templates choosable for Designs [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1744908&amp;group_id=149865&amp;atid=776045">1744908</a>]</li>
+    <li>[Admin] <!--{120446725463044}-->german words in english design mask [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1753052" target="_blank">1753052</a>]</li>
+    <li>[Admin] <!--{120446725463045}-->Submitting Media Upload without File [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1753031" target="_blank">1753031</a>]</li>
+    <li>[Admin] <!--{120446725463046}-->Linked categories on media upload are lost [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1753032" target="_blank">1753032</a>]</li>
+    <li>[Login] <!--{120446725463047}-->Self registration in IE7 fails, javascript Bug [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1753963">1753963</a>]</li>
+    <li>[Login] <!--{120446725463048}-->Error messages in self registration [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1753964">1753964</a>]</li>
+    <li>[Admin] <!--{120446725463049}-->Template Editor interprets HTML entities [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1755181" target="_blank">1755181</a>]</li>
+    <li>[Admin] <!--{120446725463050}-->CSS broken on sort Stylesheet Table [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1755187">1755187</a>]</li>
+    <li>[Admin] <!--{120446725463051}-->CSS broken on sort Template Table [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1755185">1755185</a>]</li>
+    <li>[Editor] <!--{120446725463052}-->Javascript buggy in IE7 [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1748002">1748002</a>]</li>
+    <li>[Admin] <!--{120446725463053}-->TOP LEVEL Menu can be cut and pasted [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1753965">1753965</a>]</li>
+    <li>[Admin] Missing image - Extensions table [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1751303">1751303</a>]</li>
+    <li>[Smarty] <!--{120446725463054}-->BLIX design in IE7: search form broken [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1753961">1753961</a>]</li>
+    <li>[Admin] <!--{120446725463055}-->Seitenadministration öffnen -&gt; Seite wird nicht vollständig [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1684676" target="_blank">1684676</a>]</li>
+    <li>[Admin] <!--{120446725463056}-->Unnötige Scrollbalken in der Administration [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1684679" target="_blank">1684679</a>]</li>
+    <li>[Editor] <!--{120446725463057}-->Editor does not save when included in a frameset [SF Bug <a target="_blank" href="http://sourceforge.net/support/tracker.php?aid=1757004">1757004</a>]</li>
+    <li>[Admin] Workflow could not be processed, Template error - missing include</li>
+    <li>[Editor] <!--{120446725463058}-->Workflow Content is not loaded in Editor [SF Bug <a href="http://sourceforge.net/support/tracker.php?aid=1714652" target="_blank">1714652</a>]</li>
+</ul>
+<p><strong>Feature Requests</strong></p>
+<ul>
+    <li>[Admin] <!--{120446725463059}-->Delete all Log messages [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1750460&amp;group_id=149865&amp;atid=776048" target="_blank">1750460</a>]</li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li><strong>[Admin] improved menu adminstration. increased usability and accessibility.</strong></li>
+    <li><strong>[Editor] new editor framework allowing easy editor changes in future versions</strong></li>
+    <li>[Admin] Improved design administration</li>
+    <li>[Admin] no auto redirect from welcome screen with deactivated javascript</li>
+    <li>[Smarty] optimized prefix and suffix support for {breadcrumb}</li>
+    <li>[Smarty] optimized prefix and suffix support for {navigation}</li>
+</ul>
+
+<h2>[2.2]</h2>
+<p><strong>Bugfixes</strong></p>
+<ul>
+    <li>[Installation] Pre-Installer crashes with less than 12M PHP memory [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1744462&amp;group_id=149865&amp;atid=776045">1744462</a>]</li>
+    <li>[Admin] fixed welcome screen for use in IE7</li>
+    <li>[Admin] fixed Smarty error in Extensions Screen</li>
+    <li>[Admin] fixed refresh problem in Group Permission Screen</li>
+    <li>[Modul] <!--{120446725463060}-->Guestbook Plugin does not work [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1750054&amp;group_id=149865&amp;atid=776045">1750054</a>]</li>
+    <li>[Modul] <!--{120446725463061}-->Simple Sitemap does not work [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1750094&amp;group_id=149865&amp;atid=776045" target="_blank">1750094</a>]</li>
+</ul>
+<p><strong>Feature Requests</strong></p>
+<ul>
+    <li>
+        <p>[Template] <!--{120446725463062}-->Beautify Submenu Preview for default templates [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1744855&amp;group_id=149865&amp;atid=776048" target="_blank">1744855</a>]</p>
+    </li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li>[Modul] added Styles for SubmenuPreview in default Template</li>
+    <li>[Smarty] new TAG {skype_online}</li>
+    <li>[Smarty] new TAG {load_item_childs}</li>
+</ul>
+
+<h2>[2.2 Beta]</h2>
+<p><strong>Bugfixes</strong></p>
+<ul>
+    <li><strong>[Core] fixed rewrite problem if BIGACE was installed in a path like http://localhost/bigace/</strong></li>
+    <li>[Core] User Group mapping exists after user is deleted [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1718940&amp;group_id=149865&amp;atid=776045" target="_blank">1718940</a>]</li>
+    <li>[Core] Fixed require problem if wrong application name was submitted</li>
+    <li>[Admin] <!--{120446725463063}-->Tabs are to short for long menu names [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1726999&amp;group_id=149865&amp;atid=776045" target="_blank">1726999</a>]</li>
+    <li>[Core] Fixed upgrade Script, installation of new Communitys failed in upgraded Systems.<br>
+        Quickfix: manually delete the files <br>
+        <em>consumer/cid{CID}/install/blix_design.sql</em><br>
+        <em>consumer/cid{CID}/install/db_data_cid.sql</em></li>
+    <li>fixed SubmenuPreview Modul for use with Smarty</li>
+    <li>fixed Sitemap2 Modul for use with Smarty (thanks simi)</li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li>[Admin] new Group Permission Plugin (replaces 4 old functional right Plugins)</li>
+    <li>[Admin] <strong>add new Updates by uploading ZIPs via Administration</strong></li>
+    <li>[Admin] merged Category/Image/File Plugins into new Mediamanager folder for usability reasons</li>
+    <li>[Admin] enhanced Plugin-Framework for easier (future) development</li>
+    <li>[Core] backend method to find user by attributes</li>
+    <li>[Core] <strong>added method for form-based user self-registration </strong>
+        <ul>
+            <li>turn on/off via admin configurations</li>
+            <li>customizable via templates</li>
+        </ul>
+        <ul>
+            <li>activate accounts via email</li>
+            <li>captcha image for spam protection</li>
+        </ul>
+    </li>
+    <li>improved BIGACE mini logo</li>
+    <li>[Smarty] new TAG {breadcrumb}</li>
+    <li>[Smarty] new TAG {bigace_copyright}</li>
+</ul>
+
+<h2>[2.1]</h2>
+<p><strong>Bugfixes<br>
+</strong></p>
+<ul>
+    <li>[Editor] hidden Menus could not be linked</li>
+    <li>[Admin] Module nicht alphabetisch sortiert [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1684711&amp;group_id=149865&amp;atid=776045" target="_blank">1684711</a>]</li>
+    <li>[Admin] Menu could not be deleted/moved - misspelled AJAX Object [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1704786&amp;group_id=149865&amp;atid=776045">1704786</a>]</li>
+    <li>[Admin] Abmelden und dann Login in der Administration [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1684689&amp;group_id=149865&amp;atid=776045" target="_blank">1684689</a>]</li>
+    <li>[Admin] <!-- google_ad_section_start -->Upgrage -&gt; Konfiguration kann nicht aufgerufen werden [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1684705&amp;group_id=149865&amp;atid=776045">1684705</a>]</li>
+    <li>[Admin] <!-- google_ad_section_start -->Community Einstellungen -&gt; Alias hinzufügen [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1684713&amp;group_id=149865&amp;atid=776045">1684713</a>]</li>
+    <li>[Admin] <!-- google_ad_section_start -->Konfiguration -&gt; menu_id setzen [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1684698&amp;group_id=149865&amp;atid=776045" target="_blank">1684698</a>]</li>
+    <li>[Core] problematic endless loop in DBLogger if statement failed</li>
+</ul>
+<p><strong>Feature Requests<br>
+</strong></p>
+<ul>
+    <li>[Core] <strong>added Smarty support for easy template customization</strong></li>
+    <li>[Admin] added Template/Stylesheet/Design Manager</li>
+    <li>[Core] added Captcha Addon (b2evo) for mass-attack protection</li>
+    <li>[Admin] <!-- google_ad_section_start -->Add Config for MenuAdmin "focus on select/open on select" [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1592177&amp;group_id=149865&amp;atid=776048">1592177</a>]</li>
+    <li>[Admin] <!-- google_ad_section_start -->Administration - Link Webseitenindex [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1473091&amp;group_id=149865&amp;atid=776048">1473091</a>]</li>
+</ul>
+<p><strong>Changes/Improvements<br>
+</strong></p>
+<ul>
+    <li>[Core] moved 3rd-Party Frameworks to new "addon/" Directory</li>
+    <li>[Core] Copyright Footer shows now correct years</li>
+    <li>[Core] 3rd-Party Addon version upgrade where possible (FCKeditor 2.4.2, Smarty 2.6.18, AdoDB 4.9.4)</li>
+    <li>[Admin] listing all used 3rd-Party Addons with Name, Version and link in Administration/Credits</li>
+    <li>[Admin] create new Configuration entry</li>
+    <li>[Modul] using new Captcha addon in Guestbook Modul</li>
+</ul>
+
+<h2>[2.0]</h2>
+<p><strong>Bugfixes<br>
+</strong></p>
+<ul>
+    <li>[Installer] <strong>added Safe mode compatibility</strong> [<a href="/forum/index.php?topic=47.0">Forum Post</a>]</li>
+    <li>[Core] added Logger compatibility for PHP Versions &lt; 4.3</li>
+    <li>[Admin] open new Editor window for each item [<a href="/forum/index.php?topic=41.0">Forum Post</a>]</li>
+</ul>
+<p><strong>Featue Requests<br>
+</strong></p>
+<ul>
+    <li>Auslesen der Logfiles über die Administration [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1663695&amp;group_id=149865&amp;atid=776048">1663695</a>]</li>
+</ul>
+<p><strong>Changes/Improvements<br>
+</strong></p>
+<ul>
+    <li>[Core] Created an easy-to-use upgrade Script from a 2.0 Release Candidate</li>
+    <li>[Core] new consistent Layout througout all apps (Pre-Installer/Installer/Upgrade/Admin)</li>
+    <li>[Admin] Created a Class ModulSelect for easier re-usage through all Scripts</li>
+    <li>[Admin] new Design (sortable Table) for Image/File Administration</li>
+    <li>[Docu] extended BIGACE API, online at <a target="_blank" href="http://bigace.sourceforge.net/phpdoc/">http://bigace.sourceforge.net/phpdoc/</a></li>
+</ul>
+
+<h2>[2.0 RC2]</h2>
+<p><strong>Bugfixes</strong></p>
+<ul>
+    <li>[Admin] <!-- google_ad_section_start -->Administration -&gt; Bilder upload [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1606173&amp;group_id=149865&amp;atid=776045">1606173</a>]</li>
+    <li>[Admin] <!-- google_ad_section_start -->Administration -&gt; Dateien upload [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1606172&amp;group_id=149865&amp;atid=776045">1606172</a>]</li>
+    <li>[Admin] Menüverwaltung -&gt; Administration -&gt; Seite anlegen [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1606101&amp;group_id=149865&amp;atid=776045" target="_blank">1606101</a>]</li>
+    <li>[Admin] <!-- google_ad_section_start -->Administration -&gt; Übersicht der Bilder (Item Counter) [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1606148&amp;group_id=149865&amp;atid=776045">1606148</a>]</li>
+    <li>[Admin] Menüverwaltung -&gt; Administration -&gt; löschen schlägt fehlt [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1606094&amp;group_id=149865&amp;atid=776045" target="_blank">1606094</a>]</li>
+    <li>[Core] Fixed error message after successful login (environment dependend)</li>
+    <li>[Editor] Internal link Dialog did not work</li>
+    <li>[Editor] Saving failed sometimes when using the "Save before closing" Dialog</li>
+</ul>
+<p><strong>Feature Requests<br>
+</strong></p>
+<ul>
+    <li>[Admin] <!-- google_ad_section_start -->Benutzeradministration -&gt; Anzeigen der Userid [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1606155&amp;group_id=149865&amp;atid=776048">1606155</a>]</li>
+    <li>[Admin] <!-- google_ad_section_start -->Kategorienadministration -&gt; Anzeige der Kategorien ID [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1606157&amp;group_id=149865&amp;atid=776048" target="_blank">1606157</a>]</li>
+    <li>[Admin] <!-- google_ad_section_start -->Seitenadministration -&gt; Sortierung der Module [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1606105&amp;group_id=149865&amp;atid=776048">1606105</a>]</li>
+    <li>[Admin] Einheitliche Fehlerbehandlung [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1606178&amp;group_id=149865&amp;atid=776048" target="_blank">1606178</a>]</li>
+</ul>
+<p><strong>Changes/Improvements<br>
+</strong></p>
+<ul>
+    <li>[Admin] Added Demo Mode for Demo hosting environments</li>
+    <li>[Core] Added support for PNG Image upload</li>
+    <li>[Editor] Improved loading, saving and language switching</li>
+    <li>[Editor] fixed Layout scalability, improved statusbar</li>
+</ul>
+
+<h2>[2.0 RC1]</h2>
+<p><strong>Bugfixes</strong></p>
+<ul>
+    <li>[Installer] Added check for GZ Support to Pre-Installer (thanks to Celebi Fikret from <a href="http://www.it-job.it/" target="_blank">www.it-job.it</a>)</li>
+    <li>[Installer] Do not show Error Message when Database already exists (thanks to Frank from <a target="_blank" href="http://www.frazzworld.com/">www.frazzworld.com</a>)<!--
+    /tracker/mod.html - Copyright 1999-2006 (c) Open Source Technology Group
+    @version $Id: mod.html 10218 2006-11-07 21:10:09Z phuff $
+    --></li>
+    <li>[Installer] Add right checks for .htacces Directorys [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1596696&amp;group_id=149865&amp;atid=776045">1596696</a>]</li>
+    <li>[Installer] missing $LANG array within Global Namespace (the E phenonmenon) (thanks to Eduard from <a target="_blank" href="http://www.totcontes.com/">www.totcontes.com</a>)</li>
+    <li>[Core] Fixed Session "Language lost" problem for special PHP configuration (thanks to Swen from <a target="_blank" href="http://www.crazybit.org">www.crazybit.org</a>)</li>
+    <li>[Core] Wrong error message "User is deactivated" instead of "DB not reachable" [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1599006&amp;group_id=149865&amp;atid=776045" target="_blank">1599006</a>]</li>
+    <li>[Admin] Categorys could be moved under themselves</li>
+    <li>[Admin] Missing submit values in "Change right" Formular</li>
+    <li>[Admin] <!-- google_ad_section_start -->menu preview button appears without read rights [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1591059&amp;group_id=149865&amp;atid=776045">1591059</a>]</li>
+    <li>[Admin] deleted menu but actions still visible [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1591063&amp;group_id=149865&amp;atid=776045">1591063</a>]</li>
+    <li>[Admin] Can create Menu beneath Top Level without rights [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1594908&amp;group_id=149865&amp;atid=776045">1594908</a>]</li>
+    <li>[Editor] Link Browser include path broken on Linux</li>
+    <li>[Portlet] <!-- google_ad_section_start -->Portlet Admin can write with missing page rights [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1597291&amp;group_id=149865&amp;atid=776045" target="_blank">1597291]</a></li>
+</ul>
+<p><strong>Feature Requests<br>
+</strong></p>
+<ul>
+    <li>[Core] missing write rights should result in a log message [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1588001&amp;group_id=149865&amp;atid=776048" target="_blank">1588001</a>]</li>
+    <li>[Modul] Modul - Applikation (IFrame) [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1471667&amp;group_id=149865&amp;atid=776048" target="_blank">1471667</a>]</li>
+    <li>[Installation] Check for existing database tables [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1501161&amp;group_id=149865&amp;atid=776048">1501161</a>]</li>
+</ul>
+<p><strong>Changes/Improvements</strong></p>
+<ul>
+    <li><strong>[Admin] </strong><strong>Update Manager can fix file rights via FTP</strong></li>
+    <li>[Admin] Modules can be de- / activated for each Community</li>
+    <li>[Core] new Modul Admin to set required Modul configuration (Project values) in a generic Mask</li>
+    <li>[Core] loadModul.php Include can now be called within a loop (e.g. to show several Pages modules at once)</li>
+    <li><strong>[Core] added experimental DB Driver using the AdoDB Framework </strong><em>- only for developer currently(!)</em></li>
+    <li>[Core] beautfied the default error pages (db not available, no consumer installed)</li>
+    <li>[Core] simplified usage of the applications class, added right check for editor and portletadmin</li>
+    <li>[Modul] Guestbook: added configurable Attributes (Blacklist, Entrys per Page, Link display at top/bottom)</li>
+    <li>[Modul] Fotogallery: added configurable Attributes (Category, Thumbnail Size, display Description)</li>
+    <li>[Modul] Foto Album: added configurable Attributes (Category, Thumbnail Size, display Description)</li>
+    <li>[Modul] Contact Mail: using new Modul Configurator (Recipients, Answer Text)</li>
+    <li>[Editor] Using latest FCKeditor release 2.3.2</li>
+    <li>[Portlet] new Portlet "SkypeOnline" that displays the Skype Button for a User</li>
+</ul>
+
+<h2>[2.0 Beta]</h2>
+<p><strong>Bugfixes<br>
+</strong></p>
+<ul>
+    <li>[Admin] Dimension small - move page not accessible [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1496405&amp;group_id=149865&amp;atid=776045">1496405</a>]</li>
+    <li>[Admin] Static Menus did not work with deleted Items</li>
+    <li>[Admin] Download several Items as ZIP with deactivated Javascript did not work</li>
+    <li>[Layout] Blix Design could not find imports on some PHP environments (thanks to Meredith from <a target="_blank" href="http://www.bio101.net/cms/">www.bio101.net</a>)</li>
+    <li>[Editor] Image Browser Dialog include not found [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1504151&amp;group_id=149865&amp;atid=776045">1504151</a>, <a href="http://sourceforge.net/support/tracker.php?aid=1516870">1516870</a>]</li>
+    <li>[Editor] Reload Page in FCKeditor when default Editor was "Plaintext"</li>
+    <li>[Editor] Editor did not work properly with deactivated cookies (session lost in some dialogs)</li>
+    <li>[Editor] Right problems when editing Menus with running Workflows</li>
+    <li>[Installation] Welcome Page, link and image reference wrong [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1504462&amp;group_id=149865&amp;atid=776045" target="_blank">1504462</a>]</li>
+    <li>[Core] Saving special Item Columns (not supported by Admin Forms) could fail</li>
+    <li>[Core] Fixed problems with single and double quotes in some formulars</li>
+    <li>[Core] ItemFutureService-&gt;hasFutureVersion() did not work</li>
+    <li>[Core] Not possible to change own Group rights if only Write rights are set</li>
+    <li>[Search] Search popup did not work in Mozilla</li>
+    <li>[Search] Images and Documents used wrong right check (user could see links to disallowed files)</li>
+</ul>
+<p><strong>Feature Requests<br>
+</strong></p>
+<ul>
+    <li>[Translation] Add Workflow Translation [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1471416&amp;group_id=149865&amp;atid=776048" target="_blank">1471416</a>]</li>
+    <li>[Modul] Include System Infos in Mail [SF feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1458705&amp;group_id=149865&amp;atid=776048" target="_blank">1458705</a>]</li>
+    <li>[Admin] versteckte Seiten in der Übersicht erkennen [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1471616&amp;group_id=149865&amp;atid=776048">1471616</a>]</li>
+    <li><strong>[Admin] Kompletten Teilbaum loeschen [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1422209&amp;group_id=149865&amp;atid=776048" target="_blank">1422209</a>]</strong></li>
+    <li><strong>[Admin] Baumstruktur in Menu Administration [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1365326&amp;group_id=149865&amp;atid=776048">1365326</a>]<br>
+    </strong></li>
+    <li><strong>[Core] Use UTF-8 codepage [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1511157&amp;group_id=149865&amp;atid=776048">1511157</a>]</strong></li>
+    <li>[Core] Add Flash / Multimedia support [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1498797&amp;group_id=149865&amp;atid=776048">1498797</a>]</li>
+    <li>[Translation] Translate the Redirect Template [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1511789&amp;group_id=149865&amp;atid=776048">1511789</a>]</li>
+    <li>[Modul] Show different content language if available [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1516297&amp;group_id=149865&amp;atid=776048" target="_blank">1516297</a>]</li>
+    <li>[Editor] grouping in insert image dialog [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1516875&amp;group_id=149865&amp;atid=776048">1516875</a>]</li>
+</ul>
+<p><strong>Changes/Improvements<br>
+</strong></p>
+<ul>
+    <li><strong>[Admin] Added Consumer Deinstallation Admin Plugin</strong></li>
+    <li><strong>[Admin] Added User-Group Admin Plugin (crate new Groups, see and change Group Member)<br>
+    </strong></li>
+    <li><strong>[Admin] Added Update check: All File rights have to fit before the Update can be executed</strong></li>
+    <li>[Admin] New Admin Mask Look &amp; Feel: More Icons and WebFX Sortable Table (thanks to <a href="http://webfx.eae.net/" target="_blank">webfx.eae.net</a>)</li>
+    <li>[Admin] Improved Item history screen and added "delete history version" link</li>
+    <li>[Admin] Create Page link in Menu administration for current Path</li>
+    <li>[Admin] Improved Statistics Index, fixed links on deactivated Rewrite Rule</li>
+    <li>[Admin] Unified feedback messages Design</li>
+    <li>[Admin] Improved User administration</li>
+    <li><strong>[Core] User can be member of multiple User Groups</strong></li>
+    <li>[Core] Portlets can now easily be defined for multi-columns (see example in Update BigaceDesign 2)</li>
+    <li>[Core] Added ServiceFactory for easy change of API implementation</li>
+    <li>[Core] Rewritten and simplified description of Functional Rights</li>
+    <li>[Core] rewritten Language and translation handling</li>
+    <li>[Core] Improved Session handling, added Security Fix for Session Hijacking</li>
+    <li>[Core] Added Caching for Language definitions</li>
+    <li>[Core] Added Applications Command for Scripts used by all Communitys (refactored CMD Templates)</li>
+    <li>[Editor] Improved feedback for Workflow Items</li>
+    <li>[Editor] Unified Editor saving for all available Editors</li>
+    <li>[Layout] Edit settings of Blix Layout with Admin System Configurations</li>
+    <li>[Installation] Improved .htaccess Support (thanks to Holger from <a href="http://www.inters4s.net/" target="_blank">www.inters4s.net</a>)</li>
+    <li>[Translation] translated Statistics Start Page</li>
+    <li>[Translation] translated Upadte messages</li>
+    <li>[Translation] moved Admin Translations to general Translation directory</li>
+    <li>[Translation] added Translations for applications class</li>
+    <li>[Translation] Portlets and Portlet Administration</li>
+    <li><strong>[Docu] New User and Developer Documentation in Docbook Format</strong></li>
+    <li>[Search] Improved Search Formular design</li>
+    <li>[Search] Added search capability for Images and Documents (search for name, description and catchword)</li>
+    <li>[Search] added Javascript and Server check for Searchterm length</li>
+    <li>[Search] improved filtering of indexed content</li>
+</ul>
+
+<h2>[1.9 Alpha] </h2>
+<strong>Feature Requests<br>
+</strong>
+<ul>
+    <li>[Core] Create Consumer outside Installer Console [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1497180&amp;group_id=149865&amp;atid=776048" target="_blank">1497180</a>]</li>
+    <li>[Admin] URL und Consumer(-administration) [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1469158&amp;group_id=149865&amp;atid=776048" target="_blank">1469158</a>] </li>
+    <li>[Portlet] Portlet - Menu [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1472771&amp;group_id=149865&amp;atid=776048" target="_blank">1472771</a>] </li>
+    <li>[Update] Add Readme to Admin Style Updates [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1474393&amp;group_id=149865&amp;atid=776048" target="_blank">1474393</a>]</li>
+    <li>[Update] Blix Layout - Language switching [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1483313&amp;group_id=149865&amp;atid=776048" target="_blank">1483313</a>] <br>
+    </li>
+    <li>[Translation] Add Language Translation [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1474373&amp;group_id=149865&amp;atid=776048" target="_blank">1474373</a>]</li>
+</ul>
+<strong>Bugfixes<br>
+</strong>
+<ul>
+    <li>[Admin] Change Item Position works Language dependend [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1476252&amp;group_id=149865&amp;atid=776045" target="_blank">1476252</a>] </li>
+    <li>[Admin] Seitenadministration - löschen von Sprachversion [SF Bug <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1473088&amp;group_id=149865&amp;atid=776045" target="_blank">1473088</a>]</li>
+    <li>[Admin] Delete and move Page Dialog does not work (Javascript error) with MS IE [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1490476&amp;group_id=149865&amp;atid=776045">1490476</a>]<br>
+    </li>
+    <li>[Modul] Design Blix - Modul Kontakt ist zu breit [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1471620&amp;group_id=149865&amp;atid=776045" target="_blank">1471620</a>]</li>
+    <li>[Installation] Not possible to install with empty db password [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1495018&amp;group_id=149865&amp;atid=776045" target="_blank">1495018</a>]</li>
+    <li>[Installation] Consumer INI entry is created before real install performed [SF Bug <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1466276&amp;group_id=149865&amp;atid=776045">1466276</a>]</li>
+    <li>[Installation] Install with PHP 4 fails [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1494225&amp;group_id=149865&amp;atid=776046" target="_blank">1494225</a>, <a href="http://sourceforge.net/forum/message.php?msg_id=3755434" target="_blank">Forum Posting</a>]</li>
+    <li>[Layout] Fixed Blix design problems with too many first level menus</li>
+</ul>
+<strong>Changes/Improvements<br>
+</strong>
+<ul>
+    <li><strong>Rewritten and simplified the entire Installation process.<br>
+        A Step-by-Step Installation (Welcome, License, Core install, Consumer install) is now to be followed.</strong></li>
+    <li><strong>Added a Pre-Installer. Upload only two files, and the installer extracts the File Structure, no longer required to copy hundreds of&nbsp; Files via FTP!<br>
+    </strong></li>
+    <li><strong>Added Consumer(Community) installation to Administration Console</strong></li>
+    <li>calculate - md5() - Community Admin Password in PHP, not in SQL any more, closed possible security hole</li>
+    <li>removed Admin Layout from Consumer, this is a global thing and NOT Consumer specific </li>
+    <li>added indepenend Admin Language for easier Language switching</li>
+    <li>added Administration Header Frame for permanent information</li>
+    <li>improved Manual Plugin, addedTopics chooser</li>
+    <li>added Consumer handling (Maintenance and Consumer-Domain Mapping)  to Administration Console</li>
+    <li>added Consumer Maintenance feature to Core system (switch off Website for a short period and leave a notice about that)</li>
+    <li>added Default Consumer handling (not registered Mappings will be routed to the default Consumer)</li>
+    <li>added hint for "delete installation directory" to Admin Index</li>
+    <li>added Hints/Tips Admin Plugin where results of several important System checks will be shown</li>
+</ul>
+
+<h2>[1.8.3]</h2>
+<strong>Feature Requests<br>
+</strong>
+<ul>
+    <li>[Admin] Group Updates by types [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1466282&amp;group_id=149865&amp;atid=776048" target="_blank">1466282</a>] </li>
+    <li>[Admin] Modules list should be moved in Admin area [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1451151&amp;group_id=149865&amp;atid=776048" target="_blank">1451151</a>] </li>
+    <li>[Admin] linked icons in admin menu [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1448715&amp;group_id=149865&amp;atid=776048" target="_blank">1448715</a>] </li>
+    <li>[Admin] Administrationsmenue vereinheitlichen [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1422215&amp;group_id=149865&amp;atid=776048" target="_blank">1422215</a>] </li>
+    <li>[Admin] Object Information Template with more values [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1429883&amp;group_id=149865&amp;atid=776048" target="_blank">1429883</a>] </li>
+    <li>[Admin] Protect Sourcecode Editor by Functional right [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1463016&amp;group_id=149865&amp;atid=776048" target="_blank">1463016</a>] </li>
+    <li>[Admin] Add Confirm when deleting language version [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1471230&amp;group_id=149865&amp;atid=776048" target="_blank">1471230</a>, <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1471610&amp;group_id=149865&amp;atid=776048" target="_blank">1471610</a>] </li>
+    <li>[Admin] Portletadministration aus der Seitenadministration aufrufen [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1471617&amp;group_id=149865&amp;atid=776048" target="_blank">1471617</a>] </li>
+    <li>[Admin] Show Update-Readme before Update is performed [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1473527&amp;group_id=149865&amp;atid=776048" target="_blank">1473527</a>]</li>
+    <li>[Core] New Default Layout [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1464962&amp;group_id=149865&amp;atid=776048" target="_blank">1464962</a>] </li>
+    <li>[Core] Image command should resize on width OR height [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1454039&amp;group_id=149865&amp;atid=776048" target="_blank">1454039</a>] </li>
+    <li>[Core] Seiten im Menue ausblenden [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1422205&amp;group_id=149865&amp;atid=776048" target="_blank">1422205</a>] </li>
+    <li>[Translation] Added english modul translations [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1458847&amp;group_id=149865&amp;atid=776048" target="_blank">1458847</a>, <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1458845&amp;group_id=149865&amp;atid=776048" target="_blank">1458845</a>, <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1458840&amp;group_id=149865&amp;atid=776048" target="_blank">1458840</a>] </li>
+    <li>[Editor] Fright dependent Editor functions [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1331337&amp;group_id=149865&amp;atid=776048" target="_blank">1331337</a>] </li>
+    <li>[Editor] Protect Editor Upload Dialog [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1459864&amp;group_id=149865&amp;atid=776048" target="_blank">1459864</a>]</li>
+    <li>[Install] Add support for sub-directory installation [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1460007&amp;group_id=149865&amp;atid=776048" target="_blank">1460007</a>] </li>
+    <li>[Install] Welcome TOP-LEVEL in English [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1430591&amp;group_id=149865&amp;atid=776048" target="_blank">1430591</a>] </li>
+    <li>[Modul] All modules should be made Updates [SF Features <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1465962&amp;group_id=149865&amp;atid=776048" target="_blank">1465962</a>] </li>
+    <li>[Modul] Feedback Modul should not display until configured [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1458708&amp;group_id=149865&amp;atid=776048" target="_blank">1458708</a>] </li>
+    <li>[Modul] UPDATE - Fotoalbum shows List even if not configured [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1467373&amp;group_id=149865&amp;atid=776048" target="_blank">1467373</a>] </li>
+    <li>[Modul] UPDATE - Guestbook has no english teaser [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1467362&amp;group_id=149865&amp;atid=776048" target="_blank">1467362</a>] </li>
+    <li>[Portlet] Portlet - Login [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1471612&amp;group_id=149865&amp;atid=776048" target="_blank">1471612</a>] </li>
+    <li>[Portlet] Portlet - nur für angemeldete User sichtbar [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1471614&amp;group_id=149865&amp;atid=776048" target="_blank">1471614</a>]<br>
+    </li>
+</ul>
+<strong>Changes/Improvements</strong><br>
+<ul>
+    <li>Added Portlet support and some Portlets for the new default Layout </li>
+    <li>Redesigned the Item Administration Mask (especially Menus) for higher usability </li>
+    <li>Module Updates install Functional rights, but do not assign them automatically </li>
+    <li>Refactored the Function Right Backend for easier Upgrade reason </li>
+</ul>
+<strong>Bugfixes<br>
+</strong>
+<ul>
+    <li>[Admin] User change does not work [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1465384&amp;group_id=149865&amp;atid=776045" target="_blank">1465384</a>] </li>
+    <li>[Admin] Seiten Administration - Link zur Portletadministration [SF Bug <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1473084&amp;group_id=149865&amp;atid=776045" target="_blank">1473084</a>] </li>
+    <li>[Admin] Upload von bilder - doppelte Fehlermeldung [SF Bug <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1473104&amp;group_id=149865&amp;atid=776045" target="_blank">1473104</a>] </li>
+    <li>[Admin] Upload von Dateien - doppelte Fehlermeldung [SF Bug <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1473103&amp;group_id=149865&amp;atid=776045" target="_blank">1473103</a>]</li>
+    <li>[Core] ItemService LastEditedItems uses wrong order by column [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1465387&amp;group_id=149865&amp;atid=776045" target="_blank">1465387</a>]</li>
+    <li>[Core] login.php does not work without ModRewrite [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1460229&amp;group_id=149865&amp;atid=776045" target="_blank">1460229</a>] </li>
+    <li><strong>[Install] Mod Rewrite deactivated - htaccess files are deployed [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1459860&amp;group_id=149865&amp;atid=776045" target="_blank">1459860</a>]</strong> </li>
+    <li>[Translation] Install translation names config.consumer.php [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1464969&amp;group_id=149865&amp;atid=776045" target="_blank">1464969</a>] </li>
+    <li>[Modul] UPDATE - RSS Reader INI File has invalid character [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1467360&amp;group_id=149865&amp;atid=776045" target="_blank">1467360</a>] </li>
+    <li>[Modul] UPDATE - RSS Reader HTML Problems TD vs. TH [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1467361&amp;group_id=149865&amp;atid=776045" target="_blank">1467361</a>] </li>
+    <li>[Modul] Tip-of-the-Day Endless loop if not tip is avilable [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1467856&amp;group_id=149865&amp;atid=776045" target="_blank">1467856</a>] </li>
+    <li>[Modul] Kontakt - Fehler beim Aufruf [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1471622&amp;group_id=149865&amp;atid=776045" target="_blank">1471622</a>] </li>
+</ul>
+
+<h2>[1.8.2]</h2>
+<strong>Feature Requests<br>
+</strong>
+<ul>
+    <li>[Installation] All Items should initially become the current Timestamp [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1432033&amp;group_id=149865&amp;atid=776048" target="_blank">1432033</a>] </li>
+    <li>[Admin] Anmelden über die URL [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1422201&amp;group_id=149865&amp;atid=776048" target="_blank">1422201</a>] </li>
+    <li>[Admin] Make max upload size dynamic [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1441311&amp;group_id=149865&amp;atid=776048" target="_blank">1441311</a>] </li>
+    <li>[Admin] default admin style selection [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1448713&amp;group_id=149865&amp;atid=776048" target="_blank">1448713</a>]</li>
+    <li>[Core] update permission support - cid dependent templates [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1447403&amp;group_id=149865&amp;atid=776048" target="_blank">1447403</a>] </li>
+    <li>[Admin] db export should exclude statistics on demand [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1451144&amp;group_id=149865&amp;atid=776048" target="_blank">1451144</a>] </li>
+    <li>[Admin] usability of right administration mask [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1451150&amp;group_id=149865&amp;atid=776048" target="_blank">1451150</a>]<br>
+    </li>
+</ul>
+<strong>Bugfixes</strong><br>
+<ul>
+    <li>[Admin] DB Export fails - undefined constant [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1432171&amp;group_id=149865&amp;atid=776045" target="_blank">1432171</a>] </li>
+    <li>[Admin] default admin style causes errors [SF Bug <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1447400&amp;group_id=149865&amp;atid=776045" target="_blank">1447400</a>] </li>
+    <li>[Admin] broken link in admin mask [SF Bug <a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1447409&amp;group_id=149865&amp;atid=776045" target="_blank">1447409</a>]</li>
+    <li>[Core] Cannot redeclare class invalidargumentexception [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1444392&amp;group_id=149865&amp;atid=776045" target="_blank">1444392</a>] </li>
+    <li>[Admin] Statistics display engine [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1451137&amp;group_id=149865&amp;atid=776045" target="_blank">1451137</a>] </li>
+</ul>
+
+<h2>[1.8.1]</h2>
+<strong>Feature Requests<br>
+</strong>
+<ul>
+    <li>[Core] Added configurable extended footer [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1422230&amp;group_id=149865&amp;atid=776048" target="_blank">1422230</a>] </li>
+    <li>[Core] Link to login with redirect URL or ItemID/Command [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1352934&amp;group_id=149865&amp;atid=776048" target="_blank">1352934</a>]</li>
+    <li>[Admin] Increased "amount of Items per Page" Steps [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1422212&amp;group_id=149865&amp;atid=776048" target="_blank">1422212</a>] </li>
+    <li>[Admin] Added mimetype images for Image/File administration </li>
+    <li>[Admin] Doppelte Abfrage beim loeschen [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1428285&amp;group_id=149865&amp;atid=776048" target="_blank">1428285</a>] </li>
+    <li>[Installer] Choose whether Statistics should be activated in Installer [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1429870&amp;group_id=149865&amp;atid=776048" target="_blank">1429870</a>] </li>
+</ul>
+<strong>Changes/Improvements<br>
+</strong>
+<ul>
+    <li>[Modul] Added full language support to the Sitemap Modul </li>
+    <li>[Design] Changed several default images (like Admin, Search, Editor) </li>
+    <li>[Admin] configurable support for smaller graphic resolutions (down to 800*600) pixel for Item/Menu Admin Screen [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1430170&amp;group_id=149865&amp;atid=776048" target="_blank">1430170</a>]<br>
+    </li>
+</ul>
+<strong>Bugfixes</strong><br>
+<ul>
+    <li>[Admin] Seite löschen ohne Funktion [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1424990&amp;group_id=149865&amp;atid=776045" target="_blank">1424990</a>] </li>
+    <li>[Editor] Fehlermeldung im FCKeditor - Server durchsuchen [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1422199&amp;group_id=149865&amp;atid=776045" target="_blank">1422199</a>] </li>
+    <li>[Core] Startet nicht ohne apache_reuqest_headers() [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1429868&amp;group_id=149865&amp;atid=776045" target="_blank">1429868</a>]<br>
+    </li>
+</ul>
+
+<h2>[1.8]</h2>
+<strong>Feature Requests<br>
+</strong>
+<ul>
+    <li>[Admin] Add Pages with delimited Items to Item Administration Screen [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1357193&amp;group_id=149865&amp;atid=776048" target="_blank">1357193</a>] </li>
+    <li>[Admin] Added Feedback Admin Plugin [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1383860&amp;group_id=149865&amp;atid=776048" target="_blank">1383860</a>] </li>
+    <li>[Editor] Added new Link and Image Dialog to the FCKEditor implementation, including an upload Dialog for Images and Documents [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1338467&amp;group_id=149865&amp;atid=776048" target="_blank">1338467</a>] </li>
+    <li>[Core] Make Catchword editable [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1358923&amp;group_id=149865&amp;atid=776048" target="_blank">1358923</a>] </li>
+    <li>[Admin] Download several Items as ZIP [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1324553&amp;group_id=149865&amp;atid=776048" target="_blank">1324553</a>] </li>
+    <li>[Admin] Added Eye Catcher to view the Statistics within a Flash Movie </li>
+    <li>[Core] Recover historical Item versions [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1324843&amp;group_id=149865&amp;atid=776048" target="_blank">1324843</a>]<br>
+    </li>
+</ul>
+<strong>Changes/Improvements<br>
+</strong>
+<ul>
+    <li><span style="font-weight: bold;">[Core] Workflow Support for Content editing (Implemented: No Workkflow, Publishing Workflow, Single Review)</span><br>
+    </li>
+    <li><span style="font-style: italic;">Made BIGACE compatible with PHP 5</span> </li>
+    <li>[Editor] Upgraded to FCKeditor 2.2</li>
+    <li>[Core] added DB Configurations and Admin Plugin, to be able to change Consumer settings via Administration (no Config Files anymore!)<span style="font-style: italic;"></span> </li>
+    <li>[Core] Rewritten the entire Exception Handling. Customizable Error Screens for both Consumer and Admin Styles </li>
+    <li>[Installer] Improved Look &amp; Feel </li>
+    <li>[Admin] added Update Plugin (refactored from Installer, to be useable by a single Consumer!) </li>
+</ul>
+<strong>Bugfixes</strong><br>
+<ul>
+    <li>[Admin] User can change their Username [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1420592&amp;group_id=149865&amp;atid=776045" target="_blank">1420592</a>] </li>
+    <li>[Admin] User can deactivate himself [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1420085&amp;group_id=149865&amp;atid=776045" target="_blank">1420085</a>] </li>
+    <li>[Admin]&nbsp;Error deleting Menu [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1396293&amp;group_id=149865&amp;atid=776045" target="_blank">1396293</a>] </li>
+    <li>[Admin] Image missing [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1368888&amp;group_id=149865&amp;atid=776045" target="_blank">1368888</a>] </li>
+    <li>[Search] Suche ohne Funktion [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1362856&amp;group_id=149865&amp;atid=776045" target="_blank">1362856</a>] </li>
+    <li>[Editor] JS Error closing FCKeditor in Mozilla [SF BUG <a href="http://rge.net/sourcefotracker/index.php?func=detail&amp;aid=1362272&amp;group_id=149865&amp;atid=776045" target="_blank">1362272</a>] </li>
+    <li>[Core] BIGACE does not work without MOD_REWRITE [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1325597&amp;group_id=149865&amp;atid=776045" target="_blank">1325597</a>] </li>
+    <li>[Admin] Statistics do not work - SQL Problems [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1370085&amp;group_id=149865&amp;atid=776045" target="_blank">1370085</a>] </li>
+    <li>[Installer] Installation is allowed for not writeable Config Files [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1346909&amp;group_id=149865&amp;atid=776045" target="_blank">1346909</a>] </li>
+</ul>
+
+<h2>[Version 1.7.2]</h2>
+<strong>Feature (Requests)</strong>
+<ul>
+    <li style="font-style: italic;">Moved to Sourceforge.net CVS for better support of distributed development!</li>
+    <li>[Editor] Updated to FCKEditor 2.1.1</li>
+    <li>[Admin] Added new Theme: CrystalClear (available as Update)<br></li>
+    <li>[Admin] Added new Theme: famfamfam (available as Update)</li>
+    <li>[Admin] Translate Admin Plugin FrightCreate [SF Feature <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1348014&amp;group_id=149865&amp;atid=776048">1348014</a>]</li>
+    <li>[Admin] Show feedback after fright creation [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1336745&amp;group_id=149865&amp;atid=776048" target="_blank">1336745]</a></li>
+    <li>[Admin] Show feedback after user creation [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1346384&amp;group_id=149865&amp;atid=776048" target="_blank">1346384</a>]</li>
+    <li>[Editor] Design specific css [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1331365&amp;group_id=149865&amp;atid=776048" target="_blank">1331365</a>]</li>
+    <li>[Installer] Translate Pre-Check [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1346901&amp;group_id=149865&amp;atid=776048" target="_blank">1346901</a>]<br></li>
+    <li>[Installer] Reload Button in Pre-Check [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1346900&amp;group_id=149865&amp;atid=776048" target="_blank">1346900</a>]<br></li>
+    <li>[Installer] Choose (default) settings for Consumer Installation [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1314736&amp;group_id=149865&amp;atid=776048" target="_blank">1314736</a>]</li>
+    <li>[Installer] DB Table Prefix [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1336348&amp;group_id=149865&amp;atid=776048" target="_blank">1336348</a>]</li>
+    <li>Improved PHPDoc for the Applications Class [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1339192&amp;group_id=149865&amp;atid=776048" target="_blank">1339192</a>]</li>
+    <li>Added ANT build.xml for adding some standards, like creation of the Release ZIP or deploying to a local test installation.</li>
+</ul>
+<strong>Changes</strong>
+<ul>
+    <li>[Admin] Changed the Default Theme Icons</li>
+    <li>[Core] Refactored Language Handling. Using INI Files and locales, instead of DB entrys and IDs.</li>
+</ul>
+<strong>Bugfixes</strong>
+<ul>
+    <li>[Core] Missing Layout results in "File not found" error [SF BUG <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1340419&amp;group_id=149865&amp;atid=776045">1340419</a>]<br></li>
+    <li>[Admin]  		 		 			<a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1346372&amp;group_id=149865&amp;atid=776045"> 				</a>Creation of Frights with empty name is possible [SF BUG <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1346372&amp;group_id=149865&amp;atid=776045" target="_blank">1346372]</a></li>
+    <li>[Search] Search ignores result settings [SF BUG <a target="_blank" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1339226&amp;group_id=149865&amp;atid=776045">1339226</a>]</li>
+    <li>[Installer] Installation for consumer handles wrong file rights incorrect [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1325523&amp;group_id=149865&amp;atid=776045" target="_blank">1325523</a>]</li>
+    <li>[Editor] Editor gibt positives feedback trotz fehler beim speichern [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1329308&amp;group_id=149865&amp;atid=776045" target="_blank">1329308</a>]</li>
+    <li>[Editor] Editor Image Chooser shows always German names [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1314921&amp;group_id=149865&amp;atid=776045" target="_blank">1314921</a>]</li>
+    <li>[Search] Search finds results in multiple languages [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1322115&amp;group_id=149865&amp;atid=776045" target="_blank">1322115</a>]</li>
+</ul>
+
+<h2>[Version 1.7.1]</h2>
+<strong>Feature Requests</strong>
+<ul>
+    <li>[Core] Added support for multiple Editors</li>
+    <li>[Editor] Added self-implemented HTML Plain Text Editor</li>
+    <li>[Admin] Added Plugin for Credits with easy extension function by adding Ini Files [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1315594&amp;group_id=149865&amp;atid=776048" target="_blank">1315594</a>]</li>
+    <li>[Admin] Do not show TOP LEVEL for Images/Files [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1323752&amp;group_id=149865&amp;atid=776048" target="_blank">1323752</a>]</li>
+    <li>[Installer] Installation Pre-Check doesn't check all required directorys [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1325526&amp;group_id=149865&amp;atid=776048" target="_blank">1323752</a>]</li>
+    <li>[Installer] Added multi-language Support for Installation process (started with English translation)</li>
+</ul>
+<strong>Changes</strong>
+<ul>
+    <li>[Editor] Updated FCKEditor to next Release 2.1</li>
+    <li>[Admin] Do not show Select Box when only one Layout is available [SF Feature <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1323606&amp;group_id=149865&amp;atid=776048" target="_blank">1323606</a>]</li>
+    <li>[Admin] Improved Administration Templates, changed Colors and some Images of Winxp Style</li>
+</ul>
+<strong>Bugfixes</strong>
+<ul>
+    <li>[Core] <em>Security Issue</em>: Login redirects with ALL Request Parameter - extracting all System Parameter, Username and Password now!</li>
+    <li>[Core] Default Session Lifetime too short [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1323801&amp;group_id=149865&amp;atid=776045" target="_blank">1323801</a>]</li>
+    <li>[Core] Opening FCKEditor with disabled Cookies kills the Session [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1324746&amp;group_id=149865&amp;atid=776045" target="_blank">1323801</a>]</li>
+    <li>[Installer] Created directorys from installer have wrong rights [SF Bug <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1325594&amp;group_id=149865&amp;atid=776045" target="_blank">1323801</a>]</li>
+</ul>
+
+<h2>[Sourceforge.net]</h2>
+<ul style="font-style: italic;">
+    <li>With the release of BIGACE 1.7 the project migrated to Sourceforge.net for a better development process.</li>
+</ul>
+
+<h2>[Version 1.7]</h2>
+<strong>Feature Requests</strong>
+<ul>
+    <li>[Editor] Link Dialog should display Scrollbars on long Item Lists</li>
+    <li>Install] added GPL as confirmation Dialog at the beginning</li>
+    <li>[Admin] Main Page display a Teaser like Menu for Admin Plugins</li>
+    <li>[Admin]&nbsp; New Plugin displaying the GNU GPL License</li>
+</ul>
+<strong>Changes</strong>
+<ul>
+    <li>[Admin] better support for deactivated Javascript</li>
+    <li>[Admin] Worked on automatic Item Positions when creating new Items, removed input field for manuel change</li>
+    <li>[Install] Updates will be listed with Versions and Descriptions from Ini Files when valid</li>
+</ul>
+<strong>Bugfixes</strong>
+<ul>
+    <li>[Install] Problems with "Create Table Default '0' auto_increment" with some MySQL Versions</li>
+    <li>[Install] not declared Constants in Installer</li>
+    <li>[Core] Installation within Subdirectorys did not work</li>
+</ul>
+
+<h2>[Version 1.7 FC]</h2>
+<ul>
+    <li>[Feature-Request] Administration öffnet in neuem Fenster (Swen Wendler)</li>
+    <li>[Feature-Request] neuer Fehler für anonyme User, Link to Login (Swen Wendler)</li>
+    <li>[CHANGE] Statistiken loggen nicht mehr gesamte URL, dafür dedizierte Werte für spätere Auswertungen</li>
+    <li>[CHANGE] Sprachen werden in umgekehrter Reihenfolge gelesen</li>
+    <li>[BUG] Im Installer wurden fehlerhafte SQL Anweisungen nicht korrekt erkannt</li>
+    <li>[BUG] Probleme beim Parsen von Ini Dateien unter bestimmten PHP Versionen gefixt (EOF in neuer Zeile anstatt in letzter)</li>
+    <li>[BUG] weitere "open_basedir restriction in effect" gefixt</li>
+    <li>[BUG] leeres Administrations Plugin entfernt (CVS Problem)</li>
+    <li>[BUG] Suche wirft Fehler bei Suche nach \ bzw. \\</li>
+    <li>[BUG] falsche Includes in Admin-Statistik Plugin</li>
+    <li>[BUG] Probleme bei Updates unter Linux (Verzeichnissnamenvergleich schlägt fehl)</li>
+    <li>[BUG] fehlender Titel in Feedback nach "Create User" in Administration Plugin</li>
+    <li>Logging API komplett überarbeitet: Alle Script Fehler werden jetzt geloggt, anstatt im Webserver Error Log zu landen</li>
+    <li>neues Update BIGACE-DESIGN2 hinzugefügt</li>
+    <li>neues Design für das Login Template</li>
+    <li>komplett überarbeitete Installations Konsole</li>
+    <li>neues Design</li>
+    <li>neue Mouse Over Hilfe Texte</li>
+    <li>Vorab System Check<br> </li>
+</ul>
+
+<h2>[Version 1.7 RC3]</h2>
+<ul>
+    <li>[BUG] Probleme beim Erstellen von Sprachversionen von Bildern und Dateien</li>
+    <li>[BUG] Image und File Command waren nicht mehrsprachfähig</li>
+    <li>[BUG] beim löschen von Items lädt die Administration bis zum Script Timeout recursiv Items</li>
+    <li>[BUG] fehlgeschlagener Email Versand schlägt zum Enduser durch</li>
+    <li>[BUG] "open_basedir restriction in effect" gefixt</li>
+    <li>[BUG] Fehlendes Cache Expire nach Upload</li>
+    <li>[BUG] Last-edited-Items Rechte für explizites Itemright</li>
+    <li>[BUG] Ausrechnung der Browser Statistiken</li>
+    <li>[BUG] Parsing von Files beim erstellen von Consumern funktioniert nicht</li>
+    <li>Komplette Umstellung der Versionierung (inkl. neuer API)</li>
+    <ul>
+        <li>Änderungen an DB Objekten werden historisch versioniert</li>
+        <li>Änderungen des Contents wird inklusive des DB Objekts versioniert</li>
+        <li>Löschung einzelner historischer Versionen möglich</li>
+    </ul>
+    <li>Projektfelder als eigene Tabellen umgesetzt, Tabellendesign komplett überarbeitet</li>
+    <ul>
+        <li>gesetzte Projektfelder für aktuelles Item anzeigen</li>
+    </ul>
+    <li>Administration umgebaut, Oberflächen komplett modular und als Plugins realisiert</li>
+    <li>Gästebuch Administration und Benutzer Frontend getrennt, Administration als Plugin umgesetzt</li>
+    <li>Tip of the Day als Modul realisiert, Administration als Plugin umgesetzt</li>
+    <li>Statistiken für jegliche Command Aufrufe eingebaut, rudimentäre Auswertungen möglich</li>
+    <li>HTML Templates eingeführt und Nutzung für einige administrative Oberflächen</li>
+    <li>Erweitertes Fright Caching</li>
+    <li>Einführung von DBWrapper Klassen zur Senkung der DB Zugriffe bei Enumeration Aufrufen</li>
+    <li>Update auf FCKEditor 2.0 (Mozilla fähig!)</li>
+    <ul>
+        <li>dadurch bedingter Wegfall des HTML Editor Applets</li>
+        <li>saubere Integration ins System, problemlose Updates möglich</li>
+    </ul>
+    <li>Erweiterung des DB Export</li>
+    <ul>
+        <li>Importfähigkeit (Ersetzung des CID Flag)</li>
+        <li>Spaltennamen werden beim Insert hinzugefügt</li>
+        <li>Speicherung des Ergebnisses in Datei</li>
+    </ul>
+    <li>Import / Export</li>
+    <ul>
+        <li>Gruppen</li>
+        <li>Funktions Rechte</li>
+        <li>Zuordnung Gruppen Funktionsrechte</li>
+    </ul>
+    <li>Neue Module hinzugefügt</li>
+    <ul>
+        <li>RSS Reader</li>
+        <li>Tip des Tages</li>
+    </ul>
+    <li>Erweiterung der Installationsroutinen</li>
+    <ul>
+        <li>Updates haben neue Konfigurationsschnittstelle</li>
+    </ul>
+    <ul>
+        <li>Updates nutzen jetzt UpdateJob Klassen</li>
+        <li>Verzeichnisse für automtisch auszuführende SQL Skripte bei (De-)Installation von Consumern</li>
+        <li>Ignore Listen für Consumer Installationen (z.B. CVS Dateien)</li>
+    </ul>
+    <li>Newsletter nicht mehr standardmäßig dabei, nur noch als Update verfügbar (da noch nicht fertig!)</li>
+    <li>Navigationsframe des WinXP Theme komplett neu gestaltet</li>
+    <li>Module sind jetzt als Plugin realisiert, was eine einfachere Wartung und Erweiterung zulässt</li>
+    <li>Inhalts Darstellung als Modul realisiert, Wegfall der Admin Entscheidung Content oder Modul</li>
+</ul>
+<h2>[Version 1.6]</h2>
+<ul>
+    <li>Caching der Fright Ergebnisse</li>
+    <li>Konsequente Trennung System und Consumer Daten im Dateisystem (Vorbereitung für kompletten Export)</li>
+    <li>Datenbank Dump eines Consumers zur Administration hinzugefügt</li>
+    <li>alle Module überarbeitet, benötigte Ressourcen modular getrennt, Queranhängigkeiten elemeniert</li>
+    <li>SQL Skripte sind jetzt komplett aus dem PHP Code ausgelagert</li>
+    <li>Styling Idee weiter umgesetzt</li>
+    <li>Look &amp; Feel der Bilder Auswahl im FCKeditor überarbeitet</li>
+    <li>Installation weiter aufgebohrt</li>
+    <ul>
+        <li>weniger Clicks notwendig</li>
+        <li>einfachere Bedienbarkeit durch Wizard-ähnlche Oberflächen</li>
+        <li>Hinweistexte erweitert</li>
+    </ul>
+</ul>
+<h2>[Version 1.5.1]</h2>
+<ul>
+    <li>Redirect Template leitet nicht mehr auf http://domain/public/ um, Link muß jetzt vollständig hinterlegt werden</li>
+    <li>Menü spezifische Administration komplett in Item Administration Framework eingebaut, redundantes Menu Admin Include gelöscht</li>
+    <li>Style Support für Administration eingebaut (Standard Style und WinXP Style)</li>
+    <li>Suche markiert gefundenen Text ausgebaut, da hiermit HTML gesprengt werden konnte</li>
+    <li>Überflüssige Bilder gelöscht</li>
+    <li>Überflüssige Templates (CSS Design, LeftSidedMenu) gelöscht und für "Greentable" ein Update erstellt</li>
+    <li>Benennung vereinheitlicht</li>
+    <li>HTML Editor API gelöscht</li>
+    <li>alle Module und deren Grafikpfade angepasst</li>
+    <li>Fehlerseite überarbeitet</li>
+</ul>
+<h2>[Version 1.5]</h2>
+<ul>
+    <li>Update Manager erstellt</li>
+    <li>Update auf FCKeditor 1.6</li>
+    <li>PopUp für Detail Informationen zu einem Item <br></li>
+    <li>diverse Backend Verbesserungen</li>
+    <li>Erweiterungen der Administration</li>
+    <ul>
+        <li>Funktionsrechte nicht mehr editierbar (nicht benötigt!)</li>
+        <li>Look &amp; Feel des Objekt Administration Dialog überarbeitet</li>
+    </ul>
+    <li>Bugfixes</li>
+    <li>Neue PHPDocumentation erstellt ohne Source Code!</li>
+</ul>
+<h2>[Version 1.4.6]</h2>
+<ul>
+    <li>Tiefgehende Updates der Administration</li>
+    <ul>
+        <li>Objekt Administration Look &amp; Feel verbessert</li>
+        <li>Objekt Administrations Dialoge stark erweitert</li>
+        <li>Source Code Editierung für Module &amp; Menüs hinzugefügt</li>
+        <li>Oberflächen vereinigt und Sourcecode zusammengeführt</li>
+    </ul>
+    <li>Überarbeitung der Item Klassen, Datenbankzugriffe halbiert!</li>
+    <ul>
+        <li>ItemTreeWalker (Gibt direkt Items zurück anstatt diese zu instanziieren)</li>
+        <li>DBItem (Direktes Mapping von SQL Selects auf Items)</li>
+        <li>Item (Zählung der Kinder wird gecached)</li>
+    </ul>
+</ul>
+<h2>[Version 1.4.5]</h2>
+<ul>
+    <li>config.system.inc.php angepasst, nur noch eine Datenbankkonfiguration notwendig</li>
+    <li>Installationsprozess an neue Vorgaben angepasst</li>
+    <ul>
+        <li>für Benutzer vereinfacht</li>
+        <li>Oberfläche vereinheitlicht</li>
+    </ul>
+    <li>Copyright Footer für alle Standard Templates</li>
+    <li>Angabe für einfacheres Handling der Dateien im öffentlichen Bereich</li>
+    <li>Neue Item Konstanten eingeführt</li>
+    <li>Performanceverbesserungen durch Anpassung des MasterItemType</li>
+    <li>Umbenennung von "Template" in "Layout" für zukünftige HTML Templates</li>
+    <li>weitere SQL Skripte ausgelagert</li>
+    <li>Refactoring verschiedener Klassen</li>
+    <li>Mehrsprachigkeit der Standardlayouts erhöht</li>
+    <li>Editor Bug (Sprachwechsel beim Seitenladen) gefixt</li>
+    <li>Administration:</li>
+    <ul>
+        <li>Designveränderungen</li>
+        <li>Benutzergruppen hinzugefügt</li>
+        <li>Funktionale Rechte für Benutzergruppen</li>
+        <li>Rechteadministrationsmasken für Benutzer vereinfacht und im Backend vereinheitlicht</li>
+    </ul>
+</ul>
+<h2>[Version 1.4.2]</h2>
+<ul>
+    <li>Konstanten Datei eingeführt für zukünftige Aufgaben</li>
+    <li>Überarbeitung von Standardskripten</li>
+    <li>Standard Templates mehrsprachfähig gemacht</li>
+    <li>Suche jetzt über DB Felder (Name,Description,Catchwords,Seiten Inhalte)</li>
+    <li>Installation einfacher und übersichtlicher gestaltet</li>
+    <li>Administration</li>
+    <ul>
+        <li>neues Design</li>
+        <li>Frameset für Performance Erhöhung</li>
+        <li>Gleiche Skripte für alle Consumer</li>
+        <li>Benutzerfreundlichkeit erhöht</li>
+        <li>Objektadministration verändert</li>
+    </ul>
+    <li>Integration meines Java HTML Editor Applets für alle Nutzer anderer Browser als IE</li>
+    <ul>
+        <li>Anpassung applications.inc.php für direkte Verfügbarkeit ohne Template Anpassungen</li>
+    </ul>
+    <li>Erweiterung Menüobjekte: Jetzt mehrsprachige Seiten möglich.</li>
+</ul>
+<h2>[Version 1.4.1]</h2>
+<ul>
+    <li>Administration</li>
+    <ul>
+        <li>öffnet sich jetzt in neuem Fenster anstatt in einem Pop-Up</li>
+        <li>Menüs in Funktionalitäten unterteilt -&gt; kleinere Skripte, logische Trennung</li>
+    </ul>
+    <li>ItemAdminService - changeItem(): Speicherung des Namens nun ohne htmlentities(). <br></li>
+    <li>Jetzt sind alle Sonderzeichen im Namen erlaubt.</li>
+    <li>Datenbankfelder der item_x Tabellen verändert. Namens Spalten sind jetzt varchar(255).</li>
+    <li>Session Management komplett überarbeitet</li>
+    <ul>
+        <li>Sessions werden in der DB abgelegt</li>
+        <li>Session Speicherung unabhängig von _SESSION daher werden Zugriffe jetzt über "_BIGACE['SESSION']-&gt;setSessionVariable('Name', 'value')" geregelt</li>
+    </ul>
+</ul>
+<h2>[Version 1.4]</h2>
+<ul>
+    <li>Klassen Inline Dokumentation (DocBlock) hinzugefügt für phpDocumentor</li>
+    <li>Dokumentation mit Hilfe von phpDocumentor 1.3.0RC2 erstellt und bigace.ini Datei hinzugefügt</li>
+    <li>Dokumentation erstellt bzw. erweitert (README,CHANGELOG,LICENSE,FCKEDITOR)</li>
+    <li>Neue Layouts hinzugefügt</li>
+    <li>Neue Module hinzugefügt</li>
+    <li>Grundlegende Caching Funktionen eingebaut:</li>
+    <ul>
+        <li>Neues Cache Verzeichnis (CID abhängig)</li>
+        <li>Library (CID unabhängig) für Dateisystem Caching entworfen</li>
+        <li>Image Command erweitert um dynamische Thumbnail Darstellung (inkl. Caching)</li>
+    </ul>
+    <li>Neues Verzeichnis für SQL Skripte, die nun nicht mehr in Klassen liegen</li>
+    <li>Redesign der Administrationshilfe, Auslagerung in 'public' Ordner da dies nicht CID abhängig ist</li>
+    <li>Erweiterte Menüadministration:</li>
+    <ul>
+        <li>Anzeige historischer Versionen, Möglichkeit diese wiederherzustellen</li>
+        <li>Auswahl der Elternseite über POP-UP möglich</li>
+        <li>Bei "Seite neu anlegen" werden Einstellungen der Elternseite angezeigt (Corporate Design!)</li>
+        <li>Sprachwahl (momentan nur Auswirkungen auf Standard Templates Encodierung und Editor)</li>
+    </ul>
+    <li>Erweitere Objekt Administration:</li>
+    <li>-Löschen der historischen Versionen</li>
+    <ul>
+        <li>"Schnellbuttons" zu Löschen/Rechte/Einstellungen in Übersicht (statt Radiobox)</li>
+        <li>Update jedes Objekts über HTTP Upload in Administration möglich</li>
+    </ul>
+    <li>Komplettes Redesign der FCKEditor-Implementierung:</li>
+    <ul>
+        <li>Alle Scripts werden über BIGACE Command gemappt</li>
+        <li>Session Unterstützung für externe Dialoge durch Anpassung der Standard Files</li>
+        <li>Sprachumschaltung bzw. Unterstützung für andere Menüsprachen (kyrillisch jetzt möglich)</li>
+        <li>Nachladen von Seiten ohne erneutes Laden des Editor<br></li>
+    </ul>
+</ul>
+<h2>[Version 1.3.1]</h2>
+<ul>
+    <li>Editiermöglichkeit für alle Objekt Projektfelder hinzugefügt</li>
+    <li>Administration wurde erweitert</li>
+    <li>Neues Layout hinzugefügt</li>
+    <li>Namensgebung vereinheitlicht</li>
+    <li>Sprachunterstützung erweitert</li>
+    <li>.htaccess in Systemordner hinzugefügt für mehr Sicherheit</li>
+</ul>
+<h2>[Version 1.3]</h2>
+<ul>
+    <li>If the anonymous User requests a Menu without having the READ right, the Login Mask is shown. POST Parameter and the requested ID are saved.</li>
+    <li>Veraltete PHP Variablen ($HTTP_*) gegen neuen ($_POST...) ausgetauscht.</li>
+    <li>Datumsinformationen werden nun als Unix Timestamp gespeichert<br></li>
+    <li>Beim editieren des TOP LEVELS kam man zurück in ein nicht existentes Menü</li>
+    <li>Beim löschen eines Benutzers wurden die ihm zugeordneten Item Rechte nicht mit gelöscht</li>
+    <li>In der Menüadministration öffnete der Editor immer das TOP LEVEL</li>
+    <li>Neues Command hinzugefügt um die Sprache zu wechseln</li>
+    <li>Administration erweitert:</li>
+    <ul>
+        <li>Hilfe Menü "?" enthält Untermenüs</li>
+        <li>System Informationen hinzugefügt</li>
+        <li>Nicht editierbare Item Informationen werden angezeigt</li>
+    </ul>
+</ul>
+<h2>[Version 1.2]</h2>
+<ul>
+    <li>Beim Neu Anlegen eines Menüs wurde die Description nicht mit gespeichert</li>
+    <li>Editor lädt sich beim Speichern neu</li>
+</ul>

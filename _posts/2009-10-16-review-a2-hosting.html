@@ -1,0 +1,85 @@
+---
+layout: bigace-posting
+title: "Review: A2 Hosting"
+description: "A2 Hosting, a green web hosting company from Michigan (US) offer BIGACE hosting in linux environments. They have quite good features and price models."
+category: news
+permalink: /news/review-a2-hosting.html
+date: "2009-10-16 20:15:00 +0200"
+author: kevinpapst
+---
+<p>
+	Before I start with the article, let me say some words about that new &quot;Hoster Review&quot; category:</p>
+<p>
+	I want to evaluate some web hosting companies for BIGACE compatibility, overall features and price models. I hope some of you find this useful, as I know that its not easy to find a good and cheap hoster, meeting the requirements for a professional BIGACE hosting. If you are related to a hoster who offers BIGACE hosting, please <a _fcksavedurl="http://dev.bigace-cms.com/contact" href="/impressum.html">contact me</a> to talk about a (review) partnership.</p>
+<h2>
+	A2 Hosting</h2>
+<p>
+	<a _fcksavedurl="http://www.a2hosting.com/2136-0-3-17.html" href="http://www.a2hosting.com/2136-0-3-17.html" target="_blank">A2Hosting</a> is a <a _fcksavedurl="http://www.a2hosting.com/2136-12-3-58.html" href="http://www.a2hosting.com/2136-12-3-58.html" target="_blank">green web hosting</a> company from Michigan (US), which are specialized in linux hosting.<br />
+	They wrote me an email, telling me that they offer BIGACE Hosting and asked about an entry on the <a _fcksavedurl="http://www.bigace.de/hosting/" href="/hosting/">BIGACE Hosting</a> page. Sure they can! And as they offered me a free test account I am going to write a short review about their offers.</p>
+<h2>
+	Registration</h2>
+<p>
+	That was really quick: I registered the package, entered all required information and received the first info email within a couple of minutes.<br />
+	<br />
+	About one hour later, I got the email with all login information, nameserver and ssh access, URL to CPanel ... payment information and more. Well structured email including a link to a good &quot;First-steps Guide&quot; how to setup the page.</p>
+<p>
+	I am using <a _fcksavedurl="http://www.inwx.de" href="http://www.inwx.de/" target="_blank">INWX</a> as domain registrar and I was pretty supprised, that they offer support for external registered domains, nice to offer for the smaller packages. And to be honest, I never saw that in Germany for that price!</p>
+<h2>
+	Features</h2>
+<p>
+	Well, I was positive suprised again what they offer:</p>
+<ul>
+	<li>
+		Ruby, Perl, Python, PHP</li>
+	<li>
+		Apache 2.2 with mod_rewrite</li>
+	<li>
+		SSH Access</li>
+	<li>
+		Cron Jobs</li>
+	<li>
+		Fantastico with several popular One-Click Install Applications</li>
+	<li>
+		Specialized <a _fcksavedurl="https://affiliates.a2hosting.com/idevaffiliate.php?id=2136&amp;url=67" href="https://affiliates.a2hosting.com/idevaffiliate.php?id=2136&amp;url=67" target="_blank">BIGACE Hosting</a></li>
+	<li>
+		Nameserver entries for external registrars</li>
+	<li>
+		Several credits for web promotion which are worth 250$</li>
+	<li>
+		SSL certificates starting at 120$/year</li>
+	<li>
+		Good support and really fast email replies (at least in my case)</li>
+	<li>
+		<strong>Unlimited</strong> disk space and traffic!</li>
+	<li>
+		...</li>
+</ul>
+<p>
+	There is a lot more, have a look at their <a _fcksavedurl="http://www.a2hosting.com/2136-5-3-33.html" href="http://www.a2hosting.com/2136-5-3-33.html" target="_blank">web hosting</a> offers. But they have also quite good <a _fcksavedurl="http://www.a2hosting.com/2136-15-3-66.html" href="http://www.a2hosting.com/2136-15-3-66.html" target="_blank">VPS Hosting</a> offers, where they support an impressive list of linux distros: CentOS, Fedora, Slackware, Gentoo, Debian, Ubuntu - that should be enough for everyone to find a distribution that fits your liking and needs.</p>
+<h2>
+	The pratical test</h2>
+<p>
+	I had to wait for a day until the nameserver records were activated (which has nothing to do with A2 Hosting), in the meantime I tried the SSH access. It works out-of-the-box and I could directly login after I received their login-info email, just 1 hour after I purchased the test package!<br />
+	Even though you can't gain root control ;) you still have enough permissions to do almost anything you need for a good web hosting experience. Personally I never saw a hoster offering SSH support in that price category and thats why I originally moved to a Virtual Server - I wish german hoster would offer that!</p>
+<p>
+	Next thing to test was user and group permissions. A2Hosting creates both a user and group for your account, now lets test it via FTP and SSH.</p>
+<ul>
+	<li>
+		<strong>FTP:</strong> Uploaded install.php and bigace_install_2.6.zip, both had kpapst as owner and group with the permission 644.</li>
+	<li>
+		<strong>SSH:</strong> Using scp the same user/group and permission were applied, only difference (as expected) was that FTP changed the last modified date, what SSH didn't.<br />
+		SCP worked with and without applying a port, where SSH refused the connection, hmm... I don't need to understand everything ;)</li>
+</ul>
+<p>
+	After the DNS entries were live and I could reach my site, I started the installation and use the Pre-Installer to extract the files directly on the server. Worked like a charm, got BIGACE up and running within 5 minutes. The delay was caused by myself, I needed to find out how to create database/user with cPanel, which I never used before.<br />
+	The files had &quot;kevin&quot; as group and apache as owner, what is good, so you can still delete files through FTP. Couldn't find any problems when installing extensions and updating content!</p>
+<p>
+	And here are some hard facts, first the <a _fcksavedurl="/a2hosting-cpanel-statistics.png" href="/a2hosting-cpanel-statistics.png">screenshot of my cPanel stats</a>, quite impressive values you can see there. I wonder when they cut off the &quot;unlimited&quot; hdd and traffic ;)</p>
+<p>
+	Second is a little <a _fcksavedurl="/benchmark-a2hosting.txt" href="/benchmark-a2hosting.txt">stress test result</a> which I ran from my Laptop using ApacheBench with <strong>&quot;ab -kc 10 -t 30 http://www.mytestdomain.com/&quot;</strong>. Keep in mind that I tested from Europe to Michigan and I my working machine is running database, webserver, browser, eclipse and several other things that make it slower. Also I&nbsp;am using a wireless connection with max. ~60kb/s upload and ~700kb/s download and I started the test only twice, so the results are probably not representative - but good.</p>
+<h2>
+	Conclusion</h2>
+<p>
+	A2 Hosting seem to be a solid hoster, providing good support for <a _fcksavedurl="https://affiliates.a2hosting.com/idevaffiliate.php?id=2136&amp;url=67" href="https://affiliates.a2hosting.com/idevaffiliate.php?id=2136&amp;url=67" target="_blank">BIGACE hosting</a> with low prices. I did not check email and all the other features they offer, thats up to you! If you are now interested in further infos check out the <a _fcksavedurl="http://www.a2hosting.com/2136-0-3-53.html" href="http://www.a2hosting.com/2136-0-3-53.html" target="_blank">A2 Hosting web site</a>.</p>
+<p>
+	<em>I hope you enjoyed that review. Please let me know if there is anything I missed to test or if you have experience with A2 Hosting that you want to share.</em></p>

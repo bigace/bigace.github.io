@@ -1,0 +1,37 @@
+---
+layout: bigace
+title: Upgrading BIGACE
+description: A list of manual upgrade steps for older Bigace versions
+permalink: /upgrade.html
+redirect_from: /de/upgrade.html
+redirect_from: /upgrade_1.8.3.html
+redirect_from: /upgrade_2.0.html
+redirect_from: /upgrade_2.1.html
+redirect_from: /upgrade_2.2.html
+redirect_from: /upgrade_2.4.html
+redirect_from: /upgrade_2.5.html
+---
+<p>
+    Upgrading Bigace is fairly simple, all information moved to the wiki article <a href="{{ site.docu_url }}/bigace:upgrade" target="_blank">Upgrading Bigace</a>.
+</p>
+<p class="attention">
+    Always remember: please start by creating a backup of filesystem and database!
+    Only if those are done, you should process with the upgrade.
+</p>
+<h3>Upgrade news</h3>
+<p>
+    The following list contanis articles about Bigace releases which may contain further upgrade information!
+</p>
+<div id="preview">
+    {% for post in site.categories.upgrade %}
+        {% if post.url %}
+            <div class="nextLevelPreview">
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <p>
+                    {{ post.excerpt }}
+                    <a href="{{ post.url }}" title="Link to: {{ post.title }}"> »</a>
+                </p>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

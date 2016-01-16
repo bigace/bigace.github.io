@@ -1,0 +1,45 @@
+---
+layout: bigace-posting
+title: "Wappalyzer integrated BIGACE  for application statistics"
+description: "BIGACE made its way into one of the coolest Add-Ons for Firefox which were lately released!"
+category: news
+permalink: /Wappalyzer-integrated-BIGACE-for-application-statistics.html
+date: "2009-02-10 05:48:04 +0200"
+author: kevinpapst
+---
+<h2>What is Wappalyzer?</h2>
+<p>Wappalyzer is a small <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addons/versions/10229">Firefox Add-On</a> which hooks into the bottom status bar of your Firefox. It displays icons of recognized web applications in the lower right corner and at the same time sends these informations to the <a target="_blank" href="http://wappalyzer.com/">Wappalyzer</a> server. Statistics are counted for currently 70 applications. More than 23.000 users already installed the plugin and visited about 256.000 websites with the amount of more than 7.000.000 pages. And this is increasing, the service reseted all statistics at January 23, so these values were counted in less than 3 weeks!</p>
+<p><img height="379" width="450" alt="Webapplyzer Screenshot" src="/wappalyzer.jpg?w=450" /></p>
+<p>As you can see from the screenshot, the BIGACE website uses JQuery and ... obviously BIGACE ;)&nbsp; Especially for experienced web user its always very interesting to see, which frameworks/apps are used by his favourite sites.</p>
+<p><strong>And why do I post all of this?</strong> Well, because with the latest version of Wappalyzer 1.2.6 BIGACE detection was integrated into Wappalyzer. <a target="_blank" href="http://www.linkedin.com/in/elbertf">ElbertF</a> (the founder of Wappalyzer) was so friendly to <a target="_blank" href="http://getsatisfaction.com/crunchlabz/topics/cms_bigace">accept my request</a> to add BIGACE to the list of apps.</p>
+<p>I tried a couple of sites from our <a href="http://forum.bigace.de/cms-showcase/" target="_blank">Showcases Forum</a> and around 60% of them are properly recognized as BIGACE'd.</p>
+<h2>What to do if your website is not recognized?</h2>
+<p>In the current version Wappalyzer recognizes BIGACE by a meta tag:</p>
+<p><code>&lt;meta name=&quot;generator&quot; value=&quot;BIGACE xxxxx&quot;&gt;</code></p>
+<p>or by a link</p>
+<p><code>Powered by &lt;a href=&quot;xxxxx&quot;&gt;BIGACE xxxx&lt;/a&gt;</code></p>
+<p>If you want your page to be counted as BIGACE site, add one of these two code snippets at least to one page and open this page with activated Wappalyzer in your Firefox. You could add this to the content of one page, but I recommend to put it into your template, so the chance that other user report your website as &quot;BIGACE infected&quot;&nbsp; increases a lot :D</p>
+<h2>Why should you use/support Wappalyzer? What are my pros?</h2>
+<p>Well, at first you are part of the Community. Yeah! Counting stats and pushing BIGACE and all the other great tools out there is an interesting task, resulting possibilities are going way deeper than I want to discuss it here.</p>
+<p>And, this is for all of you running any tool recognized by Wappalyzer at your website (I hope it is BIGACE...), you will get a couple of valueable backlinks from the Wappalyzer detail page. For example have a look at the <a href="http://wappalyzer.com/detail/?domain=bigace.de" target="_blank">detail page of bigace.de</a>, you'll find one nofollow backlink to your page and four backlinks to well known information services which themselves also give backlinks... interesting for your SEO&nbsp;work!</p>
+<p>It's simply a cool tool which gives you a quick overview about the tools the current page uses.</p>
+<h2>Cons and possible improvements</h2>
+<p>Your IP&nbsp;adress is logged, surfing profiles of you could be created. <em>Big Brothers watching you...</em> and in the <a href="http://wappalyzer.com/privacy/" target="_blank">Privacy Statement</a> that option is not declined! It says &quot;we do not share any personal information you may provide with others&quot; and &quot;user's 		<a href="http://en.wikipedia.org/wiki/IP_address">IP address</a> is stored for statistical purposes&quot;. Don't get me wrong, counting surfing stats is done by a lot of tools, like Google Toolbar and many more. I never liked that idea and always get a sinking feeling from it, obviously I use Wappalyzer nevertheless...</p>
+<p>It is not possible to deactivate the saving of your IP adress. Please Elbert, add an option! This doesn't need to be activated by default, but it would be great if it would be possible. Yes, you still need to trust the service to really not save the datat, but it would feel way better, if you could activate an &quot;anonymous&quot; mode.</p>
+<p>I would love to set options to completely deactivate these &quot;phoning home&quot; as well. I could imagine surfing the web and only see the icons as information for myself. I don't want to edit the overlay.js and remove the &quot;broken image&quot; that activates the call (in method phoneHome) for that.</p>
+<p>If yuo want to know how to deactivate the wappalyzer call home, post a comment here.</p>
+<h2>Exploiting (Spamming) Wappalyzer</h2>
+<p>Yes, Wappalyzer can be exploited/spammed in its current implementation easily. Just edit the overlay.js file in the wappalzer extension directory and change the regexp rules to match any page you want. I am not a bad guy, so I just tested different methods with four pages. But with the current server techniques behind it, this is an invitation for all spammers. You could, even easier, grab a list of your domains and apply them with randomly choosen tools by opening a special URL (which I will not publish here).</p>
+<p>How could it be solved? Well, it <em>could</em> be quite simple. New domains should be stored in a extra database and only applied to the real-time-stats after a server side check. The server should load the HTML and scan it with the same regexp rules that apply on client side. That said the reported tools need to match on both server and client. But *woops* this is not possible, because the Add-On currently only sends the domain, not the full URL. I found a lot of pages where BIGACE is stored in a sub-folder, so my idea for this check would fail, and this applies to many many pages and tools out there, this is not a BIGACE related question.</p>
+<p>Well, I tried to contact the developer about that, still waiting for a reply how he sees the problem. Probably it is enough to set the links to nofollow to stop most of the spam, pushing its own tool would still be possible in that way... but I hope this is of no interest for most of tool maintainer.</p>
+<p>Oh, and @Elbert, if you read this: I hope you are willing to remove four pages (crazyegg.com, wappalyzer.com, getsatisfaction.com and heise.de)&nbsp;which &quot;accidentally&quot; found their way into the BIGACE stats ;-D</p>
+<p>At the end this is no problem for you as user, but its a problem for the credibililty of the counted statistics.</p>
+<h2>Try Wappalyzer!</h2>
+<p>Its a fun tool and you can still deactivate it in your Firefox AddOn dialog.</p>
+<h2>Links</h2>
+<ul>
+    <li><a href="http://wappalyzer.com/">Wappalyzer Homepage</a></li>
+    <li><a href="http://wappalyzer.com/detail/?app=BIGACE" target="_blank">BIGACE at Wappalyzer statistics</a></li>
+    <li>Install Wappalyzer from <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addons/versions/10229">Firefox Addons</a> or from its <a target="_blank" href="http://wappalyzer.com/install/">own website</a></li>
+    <li>For the German reader the article about <a href="http://t3n.yeebase.com/aktuell/news/newspost/wappalyzer-zeig-mir-welche-anwendung-du-verwendest/2449/" target="_blank">Wappalyzer at Yeebase</a> could be interesting</li>
+</ul>

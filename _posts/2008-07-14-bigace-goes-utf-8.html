@@ -1,0 +1,29 @@
+---
+layout: bigace-posting
+title: "BIGACE goes UTF-8"
+description: "With the release of version 2.5 RC1, BIGACE will use UTF-8 encoding throughout the complete backend."
+category: news
+permalink: /BIGACE-goes-UTF-8.html
+date: "2008-07-14 00:16:01 +0200"
+author: kevinpapst
+---
+<p>Thats a big step forward for all multi-language pages, using different codepages and encodings than we do here in Europe. And even here in Europe its quite different between the countries.</p>
+<p><strong>If you are installing BIGACE for the first time, you don't need to do anything.</strong> Just have fun!</p>
+<p>But if you update from a previous version, you should carefully read this posting and all related links!</p>
+<h2>Why did we made this step?</h2>
+<p>First of all, its important for all the people who are going to use BIGACE in the future. There is no more reason to worry, if the websites content will be displayed correct and especially, if it is saved in the proper encoding. Also having PHP6 in mind, that brings native UTF-8 support, this step was required. We can already enjoy the multilanguage environment and when the time comes, we can lean back, relax and just wait for the hoster updating the PHP environment...</p>
+<p>Next point is that all actual browser and OS support UTF-8 encoding, so we do not have to think about frontend encoding.</p>
+<h2>What must be considered before updating?</h2>
+<p>Good question! :-D</p>
+<p>This is one of the main reasons, why this posting is published. The older versions of BIGACE simply created the database without specifying the encoding. So your database and tables rely on the default setting of your MySQL server.</p>
+<p>The new BIGACE version uses UTF-8 encoding everywhere, database and tables are created in <strong>utf8_general_ci</strong>, the upgrade indeed still uses your current settings!</p>
+<p>After the upgrade was processed, you have to convert your database, which requires some manual steps to perform. Everything is documented in the Wiki (see links below).</p>
+<p>Using BIGACE without UTF-8 is still possible, but <strong>NOT</strong> recommended and <strong>NOT</strong> supported!</p>
+<p>So please everybody, be prepared for the update, read the wiki articles and the upgrade infos. Make your backup, test the conversion once in a safe environment and then, if you find everything working well, upgrade your productive system! My upgrade needed about 15 minutes... it should be easy if you follow the information strictly!</p>
+<h2>Related links</h2>
+<p>Please read the following links in the given order:</p>
+<ol>
+    <li><a href="/upgrade-2.5.html">Upgrade information from 2.4 to 2.5</a></li>
+    <li><a href="http://wiki.bigace.de/bigace:administration:utf8">Wiki article about UTF-8 conversion for BIGACE</a></li>
+    <li><a href="http://wiki.bigace.de/bigace:administration:utf8-conversion">BIGACE conversion helper</a></li>
+</ol>

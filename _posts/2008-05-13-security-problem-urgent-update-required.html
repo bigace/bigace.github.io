@@ -1,0 +1,60 @@
+---
+layout: bigace-posting
+title: "Security problem - Urgent Update required!"
+description: "Yesterday a remote file extension was released at milw0rm. Thanks to a watchful member, this issue was reported today.
+The problem has a high risk potential! You should UPDATE NOW for your own safety."
+category: news
+permalink: /security-problem-urgent-update-required.html
+date: "2008-05-13 15:43:22 +0200"
+author: kevinpapst
+---
+<h2>Patch to fix the issue</h2>
+<p>Download the Patch from the <a href="http://sourceforge.net/project/showfiles.php?group_id=149865">Sourceforge download page</a> - <a href="http://downloads.sourceforge.net/bigace/Remote-Exploit-2.4_0.3.zip">direct link</a></p>
+<p>Install it using the BIGACE Admin Panel: System / Extensions / Upload.</p>
+<p>For discussion, come to <a href="http://forum.bigace.de/index.php/topic,251.0.html" target="_blank">this Forum thread in General/Security</a>.</p>
+<h2>Background Infos</h2>
+<ul>
+    <li><a target="_blank" href="http://secunia.com/advisories/30183/" rel="nofollow">http://secunia.com/advisories/30183/</a></li>
+    <li><a target="_blank" href="http://milw0rm.com/exploits/5596" rel="nofollow">http://milw0rm.com/exploits/5596</a><a href="http://packetstormsecurity.org/filedesc/bigace-rfi.txt.html" target="_blank"><br />
+    </a></li>
+</ul>
+<h2>Which sites are in danger?</h2>
+<p>First of all, the problem occures not in all circumstances (as you can see from this page).</p>
+<p>The problem only exists, if your environment has activated the &quot;register_globals&quot; PHP setting, which is asked be turned &quot;Off&quot; during installation.</p>
+<p>You should also check if you installed the .htaccess files used to block access to the system (/system/, /consumer/) directorys. File permission (see below) increase security even more.</p>
+<p>What else? <b>Ask/Push your hoster to install a PHP Hardener patch like </b><a href="http://www.hardened-php.net/suhosin/" target="_blank"><b>Suhosin</b></a><b>.</b> It increases security of PHP environments alot, especially for currently unknown software flaws.</p>
+<h2>File permissions</h2>
+<p style="color: red;"><b>The following is always true, not just because of the current problem.</b></p>
+<p>Make sure, to check your file permissions:</p>
+<ul>
+    <li>http://localhost/bigace/addon/smarty/plugins/function.captcha.php</li>
+    <li>http://localhost/bigace/system/application/util/item_information.php</li>
+    <li>http://localhost/bigace/system/application/util/jstree.php</li>
+    <li>http://localhost/bigace/system/classes/sql/AdoDBConnection.php</li>
+    <li>http://localhost/bigace/system/admin/plugins/menu/menuTree/plugin.php</li>
+</ul>
+<p>These files are NOT ALLOWED to be accessed by a browser.</p>
+<h2>Quick code fixes</h2>
+<p><b>The following code change is obsolete, due to the released patch!</b></p>
+<p>One quick fix is to edit the file &quot;/addon/smarty/plugins/function.captcha.php&quot;:</p>
+<p>Move line 3 (require_once) into the function itself:</p>
+<pre>
+&lt;?php
+// ... 
+function smarty_function_captcha($params, &amp;$smarty)
+{
+&nbsp;&nbsp;&nbsp; require_once($GLOBALS['_BIGACE']['DIR']['addon'].'b2evo/b2evo_captcha.class.php');
+ &nbsp;&nbsp; include($GLOBALS['_BIGACE']['DIR']['addon'].'b2evo/b2evo_captcha.config.php');
+// ...
+}
+?&gt;</pre>
+<h2>Sorry folks!</h2>
+<p>I am really, really sorry about the problems, some sites got already defaced.</p>
+<p>The&nbsp; people who found the problem did NOT try to contact me, they released the exploit without any warning on &quot;known pages&quot;, which I not regular check.</p>
+<p>Starting a discussion about HOW MUCH I HATE THOSE IDIOTS who ruin other peoples (mostly private) work is worthless. Finding security holes is a good job and I respect people with the ability to search and find problems in software, but: <br />
+Not if they use their knowledge for such stupid attacks, only meant to destroy!</p>
+<p>Want to say thanks to the people, that released this exploits without a warning?! You find their website within the exploit code at the milw0rm page.</p>
+<p>&nbsp;</p>
+<p>PS: my log file is full with attacks, all days long ... just to let you know you great &quot;hackers&quot; out there: Suhosin patch installed, GLOBALS as parameter is NOT allowed!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

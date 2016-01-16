@@ -1,0 +1,29 @@
+---
+layout: bigace-posting
+title: "Security Fix for 2.5"
+description: "An SQL Injection was found in BIGACE 2.5 today. Please install the patch as soon as possible!"
+category: news
+permalink: /Security-Fix-for-2.5.html
+date: "2009-04-27 00:35:39 +0200"
+author: kevinpapst
+---
+<p>Thanks for the BIGACE user merpil and gernot, a dangerous SQL&nbsp;injection was found and could already be fixed today. Please download and install the patch matching to your system, to make sure your authentication system is not vulnerable against this Zero-Day-Exploit.</p>
+<p>This bug was not published anywhere else before, so you should be safe if you install the patch right away.</p>
+<h2>Patch Download</h2>
+<p>Please download the patch for your system:</p>
+<ul>
+    <li><a target="_blank" href="http://sourceforge.net/project/downloading.php?group_id=149865&amp;filename=SQL-Injection-Auth-2.4_0.1.zip">BIGACE 2.4</a></li>
+    <li><a target="_blank" href="http://sourceforge.net/project/downloading.php?group_id=149865&amp;filename=SQL-Injection-Auth-2.5_0.1.zip">BIGACE 2.5</a></li>
+</ul>
+<h2>Install Patch</h2>
+<p>Open your BIGACE&nbsp;administration and go to Extensions / Administration.</p>
+<p>Select the downloaded file from your computer and upload it to BIGACE. Make sure the Checkbox &quot;Upload &amp; Install&quot; is checked:</p>
+<p><img src="http://www.bigace.de/install-patch-screenshot1.jpg" alt="" /></p>
+<p>Click upload and after the patch was automatically installed, your system is safe. If you cannot use the remote installer, read the <a href="http://wiki.bigace.de/bigace:manual:updates">wiki page about FTP&nbsp;updates</a>.</p>
+<h2>Background</h2>
+<p>This bug was existing since 2.4. In BIGACE 2.4 it was only useable with PHP&nbsp;systems turned &quot;magic_quotes_gpc = Off&quot; which instead in most systems is turned &quot;On&quot;. With code changes for BIGACE 2.5, which were necessary for compatibility issues with the upcoming PHP 6, the bug became widly useable, so even systems with deactivated <a href="http://www.php.net/manual/en/security.magicquotes.php" target="_blank">magic_quotes</a> were attackable.</p>
+<p>The only requirement was to know the username of an account with enough permissions, so all systems using the default username &quot;admin&quot; were in high danger.</p>
+<h2>Credits</h2>
+<p>Big thanks to merpil. He worked together with me, gave me insides of his website, logfiles and time to find out whats going on while his website was defaced twice.</p>
+<p>@Defacement crew who originally found that bug: Sorry, not a <a rel="nofollow" target="_blank" href="http://en.wikipedia.org/wiki/Zero_day_attack">Zero-Day-Exploit</a> anymore. I would haven given you the credibility and probably even a backlink if you came to me in first place, but using your knowledge to destroy other peoples work is just a stupid behaviour...&nbsp;</p>
+<p>The initial discussion thread can be found in the <a href="http://forum.bigace.de/allgemein/gehacket/">BIGACE forum</a> (only in German).</p>

@@ -1,0 +1,114 @@
+---
+layout: bigace
+title: BIGACE development roadmap
+description: BIGACE development roadmap
+permalink: /roadmap.html
+redirect_from: /de/roadmap.html
+---
+    <p>
+        This is the Roadmap for the next BIGACE releases. If you want to influence future development of Bigace, register at the forum and join our discussion! We believe, that an open environment and active attendence of all participants will result in a better software.</p>
+    <h2>
+        Version 3.0</h2>
+    <p>
+        <strong>Estimated release date: nie</strong></p>
+    <p>
+        The 3.0 release is almost ready. But there are some more things to do, before it can be released:</p>
+    <ul>
+        <li>
+            new design for wiki (?)</li>
+        <li>
+            new design for forum (?)</li>
+        <li>
+            improved v3 template creator</li>
+        <li>
+            a tool for v3 - translation</li>
+        <li>
+            more documentation</li>
+    </ul>
+    <p>
+        <strong>Done:</strong></p>
+    <ul>
+        <li>
+            <strike>a new website</strike></li>
+        <li>
+            <strike>the infrastructure for plugin release and remote search</strike></li>
+        <li>
+            <strike>Extension administration:</strike>
+            <ul>
+                <li>
+                    <strike>show which extensions are installed</strike></li>
+            </ul>
+        </li>
+        <li>
+            <strike>only show admin extension menus when installed for community</strike></li>
+        <li>
+            <strike>based on Zend Framework</strike></li>
+        <li>
+            <strike>preview from editor</strike></li>
+        <li>
+            <strike>new frameless Admin template</strike></li>
+        <li>
+            <strike>add mass upload for files</strike> (using HTML5), probably ftp/webdav/zip upload for batch processing (single file upload is not a good solution in all cases)</li>
+        <li>
+            <strike>manage all community settings in administration</strike></li>
+        <li>
+            <strike>filemanager extension as standard application&nbsp;</strike> (tree view for menus)</li>
+        <li>
+            <strike>new default template</strike></li>
+        <li>
+            <strike>allow to save images/files/documents below pages, not only in flat structure</strike></li>
+        <li>
+            <strike>add more events to the core system</strike></li>
+        <li>
+            <strike>page caching</strike></li>
+        <li>
+            <strike>workflow and default language for additional content</strike></li>
+        <li>
+            <strike>real user profile (firstname,lastname,avatar,url,about me)</strike></li>
+        <li>
+            <strike>permission for workflow only based on current item permissions</strike></li>
+        <li>
+            <strike>improved error pages as Smarty templates (probably show errors using default header+footer)</strike></li>
+        <li>
+            <strike>allow linking of content to other pages</strike></li>
+        <li>
+            <strike>more Configurations for all parts of Administration and Core</strike></li>
+        <li>
+            <strike>support AdoDB (light?) driver in complete core (currently there are some minor bugs, because of result fetching)</strike></li>
+    </ul>
+    <h2>
+        Version 3.x</h2>
+    <ul>
+        <li>
+            improved admin dashboard (some statistics and links for beginners)</li>
+        <li>
+            do not display information messages after community installation, only if an error occured!</li>
+        <li>
+            improve xml-sql mapper (install/insert =&nbsp;only insert, update/replace = insert or update, delete =&nbsp;delete key)</li>
+        <li>
+            email settings for phpmailer</li>
+        <li>
+            uninstall community
+            <ul>
+                <li>
+                    use new db framework to make sure all data will be removed</li>
+                <li>
+                    remove data from plugins, using the xml framework to create delete statements for all tables</li>
+                <li>
+                    delete path /consumer/cid{CID}/</li>
+                <li>
+                    delete path /public/cid{CID}/</li>
+            </ul>
+        </li>
+        <li>
+            Extension administration:
+            <ul>
+                <li>
+                    deinstallation link</li>
+                <li>
+                    list Plugins marked as compatible with the version (as default)</li>
+                <li>
+                    list all Plugins (additional link to fetch these)</li>
+            </ul>
+        </li>
+    </ul>
