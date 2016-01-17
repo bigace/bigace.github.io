@@ -9,6 +9,7 @@ api_url: http://dev.bigace.de/api/latest/
 image_url: http://www.bigace.de/hoster
 issue_url: https://github.com/bigace/bigace2/issues
 github_url: https://github.com/bigace/
+plugins_url: http://plugins.bigace.de
 permalink: /news/:title
 gems:
   - jekyll-redirect-from
