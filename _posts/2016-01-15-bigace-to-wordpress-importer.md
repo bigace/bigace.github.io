@@ -2,7 +2,7 @@
 layout: bigace-posting
 title: "Bigace to Wordpress importer"
 description: "Migrate Bigace websites to Wordpress"
-category: upgrade
+category: news
 permalink: /news/bigace-to-wordpress-importer.html
 date: "2016-01-15 20:00:00 +0200"
 author: kevinpapst
