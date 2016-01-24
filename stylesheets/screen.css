@@ -554,6 +554,9 @@ ul.horizontal li, ol.horizontal li
 .notFound {
     text-align: center;
 }
+.notFound h2 {
+    margin: 30px 0 10px 0;
+}
 #contentHome p
 {
     margin-bottom:20px;
