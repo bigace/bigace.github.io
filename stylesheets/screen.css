@@ -547,10 +547,12 @@ ul.horizontal li, ol.horizontal li
 /* ####### DONATION ######## */
 #contentHome
 {
-    float:left;
     width:950px;
     color:#333;
     padding:0 20px;
+}
+.notFound {
+    text-align: center;
 }
 #contentHome p
 {
