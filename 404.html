@@ -6,11 +6,23 @@ permalink: /404.html
 ---
 <script type="text/javascript">
     var testUrl = window.location.pathname;
+    
     var foundPlugin = testUrl.indexOf("/plugins/"); 
     if (foundPlugin != -1) {
         var pluginsHome = "http://plugins.bigace.de";
         var newUrl = pluginsHome + testUrl.substr(foundPlugin);
         location.href = newUrl;
+    }
+
+    var redirects = [
+        {"old": "/plugins", "new": "http://plugins.bigace.de/plugins/"},
+        {"old": "/famfamfam-1.html", "new": "http://plugins.bigace.de/plugins/"}
+    ];
+    for(var key in redirects) {
+        var link = redirects[key];
+        if (link.old == testUrl) {
+            location.href = link.new;
+        }
     }
 </script>
 <div class="notFound">
