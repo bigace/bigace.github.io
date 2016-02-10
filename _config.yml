@@ -10,6 +10,9 @@ image_url: http://www.bigace.de/hoster
 issue_url: https://github.com/bigace/bigace2/issues
 github_url: https://github.com/bigace/
 plugins_url: http://plugins.bigace.de
+v3_latest_version: 3.0
+v3_latest_date: 2015-07-26
+v3_download_latest: http://plugins.bigace.de/plugins/get/225-Bigace
 permalink: /news/:title
 gems:
   - jekyll-redirect-from
