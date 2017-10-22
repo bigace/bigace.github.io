@@ -619,7 +619,7 @@ iframe.tool { width:100%; border: none; height: 1000px; }
 * */
 #content .donation li.amazon a.uk { background: url('../images/amazon_1-uk.png') 0 0 no-repeat #ffd5d5; }
 #content .donation li.amazon a.de { background: url('../images/amazon_1-de.png') 0 0 no-repeat #ffd5d5; }
-#content .donation li.paypal a { background: url('../images/paypal_2.png') 0 0 no-repeat #ffd5d5; width: 102px; }
+#content .donation li.paypal a { background: url('../images/paypal_2.png') 0 0 no-repeat #ffd5d5; width: 102px; text-indent: -9999px; }
 #content .donation .clearer { height: 1px; clear:left; }
 #content p.deprecated {color:red; font-weight: bold; margin:0px;}
 

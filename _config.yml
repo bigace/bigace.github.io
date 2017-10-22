@@ -9,7 +9,7 @@ api_url: http://dev.bigace.de/api/latest/
 image_url: /images
 issue_url: https://github.com/bigace/bigace2/issues
 github_url: https://github.com/bigace/
-plugins_url: https://github.com/bigace/plugin-releases
+plugins_url: https://github.com/bigace/plugin-releases/
 v3_latest_version: 3.0
 v3_latest_date: 2015-07-26
 v3_download_latest: https://github.com/bigace/bigace3/files/1405012/bigace_3.0.zip
