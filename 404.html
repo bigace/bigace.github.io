@@ -9,14 +9,14 @@ permalink: /404.html
     
     var foundPlugin = testUrl.indexOf("/plugins/"); 
     if (foundPlugin != -1) {
-        var pluginsHome = "http://plugins.bigace.de";
+        var pluginsHome = "https://github.com/bigace/plugin-releases";
         var newUrl = pluginsHome + testUrl.substr(foundPlugin);
         location.href = newUrl;
     }
 
     var redirects = [
-        {"old": "/plugins", "new": "http://plugins.bigace.de/plugins/"},
-        {"old": "/famfamfam-1.html", "new": "http://plugins.bigace.de/plugins/"}
+        {"old": "/plugins", "new": "https://github.com/bigace/plugin-releases"},
+        {"old": "/famfamfam-1.html", "new": "https://github.com/bigace/plugin-releases"}
     ];
     for(var key in redirects) {
         var link = redirects[key];
