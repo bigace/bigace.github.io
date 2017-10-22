@@ -4,7 +4,6 @@ relative_permalinks: false
 docu_url: http://wiki.bigace.de
 forum_url: http://forum.bigace.de
 download_url: /download.html
-tools_url: http://dev.bigace.de/tools
 image_url: /images
 issue_url: https://github.com/bigace/bigace2/issues
 github_url: https://github.com/bigace/
