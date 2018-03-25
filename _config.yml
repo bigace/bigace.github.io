@@ -1,6 +1,20 @@
-name: BIGACE Web CMS
+name: "BIGACE Web CMS"
+locale: "de_DE"
+url: "https://www.bigace.de"
+baseurl: ""
+
 markdown: kramdown
 relative_permalinks: false
+
+permalink: /news/:title
+plugins:
+  - jekyll-mentions
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-gist
+
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old, .gitignore, .git]
+
 docu_url: https://bigace.readthedocs.io/
 forum_url: https://github.com/bigace/bigace/issues
 docs_url: https://bigace.readthedocs.io/
@@ -12,12 +26,3 @@ plugins_url: https://github.com/bigace/plugin-releases/
 v3_latest_version: 3.0
 v3_latest_date: 2015-07-26
 v3_download_latest: https://github.com/bigace/bigace3/files/1405012/bigace_3.0.zip
-
-permalink: /news/:title
-gems:
-  - jekyll-mentions
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-gist
-
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old, .gitignore, .git]
