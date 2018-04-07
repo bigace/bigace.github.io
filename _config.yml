@@ -2,6 +2,7 @@ name: "BIGACE Web CMS"
 locale: "de_DE"
 url: "https://www.bigace.de"
 baseurl: ""
+bing-id: '874E17F27A8EABE9DDAED762FC498BC4'
 
 markdown: kramdown
 relative_permalinks: false
